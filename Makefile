@@ -6,7 +6,7 @@ HTML=$(MARKDOWN:.md=.html)
 all: $(HTML)
 
 %.html: %.md
-	pandoc -s --css css/sakura-earthly.css --from=markdown --to=html $< -o $@
+	pandoc -s `cat includes.txt` --quiet --css css/sakura-earthly.css -f markdown -t html5 -o index.html
 
 clean:
 	rm $(HTML)

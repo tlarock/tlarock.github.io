@@ -1,0 +1,5 @@
+markdown/intro.md
+markdown/research.md
+markdown/publications.md
+markdown/bio.md
+markdown/contact.md
