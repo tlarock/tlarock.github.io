@@ -1,14 +1,7 @@
-# Find all markdown files
-MARKDOWN=$(shell find . -iname "*.md")
-# Form all 'html' counterparts
-HTML=$(MARKDOWN:.md=.html)
-
-all: $(HTML)
-
-%.html: %.md
+.PHONY: all clean
+all:
 	pandoc -s `cat includes.txt` --quiet --css css/sakura-earthly.css -f markdown -t html5 -o index.html
 
 clean:
-	rm $(HTML)
+	rm index.html
 
-.PHONY: all clean
