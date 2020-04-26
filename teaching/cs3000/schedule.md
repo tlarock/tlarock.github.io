@@ -6,6 +6,6 @@
 
 # Course Schedule
 
-| Date | Topic | Homework Due | Homework Assigned |
-| --- | --- | --- | --- |
-| 5/4/2020 | Welcome & Intro | N/A | N/A |
+| Date | Topic | Homework Due | Homework Assigned | Reading Assigned |
+| --- | --- | --- | --- | --- |
+| 5/4/2020 | Welcome & Intro | N/A | N/A | N/A |
