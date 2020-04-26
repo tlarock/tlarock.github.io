@@ -16,7 +16,7 @@ Live lecture attendance is optional, but watching the lectures is assumed for ho
 
 ##### Instructor 
 
-Name: [Tim LaRock](tlarock.github.io). I use he/him/his pronouns and you can call me Tim.
+Name: [Tim LaRock](tlarock.github.io). You can just call me Tim. I use he/him/his pronouns.
 
 Email: [larock.t@northeastern.edu](mailto:larock.t@northeastern.edu)
 
