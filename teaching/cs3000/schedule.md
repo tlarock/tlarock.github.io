@@ -8,4 +8,4 @@
 
 | Date | Topic | Homework Due | Homework Assigned | Reading Assigned |
 | --- | --- | --- | --- | --- |
-| 5/4/2020 | Welcome & Intro | N/A | N/A | N/A |
+| 5/4/2020 | Welcome and Introduction | N/A | N/A | N/A |

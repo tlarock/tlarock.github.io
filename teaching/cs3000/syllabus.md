@@ -20,7 +20,7 @@ Name: [Tim LaRock](tlarock.github.io). You can just call me Tim. I use he/him/hi
 
 Email: [larock.t@northeastern.edu](mailto:larock.t@northeastern.edu)
 
-Timezone: UTC+4 (EST, Boston time)
+Timezone: UTC-4 (EDT, Boston time)
 
 ###### Instructor Office hours
 I will hold open office hours for a few hours a week in my Zoom room. Tenatively, these hours will be:
@@ -33,12 +33,28 @@ If you feel you need significant help, or would just prefer a 1-1 or small group
 
 
 ##### Teaching Assistants
-There will be multiple TAs for the course. They are available as a resource for you as well, please reach out to them. TAs will be available to help you and will handle grading of homework/exams.
+There will be multiple TAs for the course. They are available as a resource for you as well, please reach out to them. TAs will be available to help you and will handle grading of homework and exams.
 
 
 
 ###### TA Office Hours
-All TAs will hold office hours weekly. Times are still TBD but will be posted here.
+All TAs will hold office hours weekly. Times are subject to change, but we will try to keep the below table updated and announce when changes are made.
+
+| Name | email | Office Hour 1 | Office Hour 2 |
+| --- | --- | --- | --- |
+| Saurabha | jirgi.s@husky.neu.edu | Wednesday, 10AM-11PM | Thursday, 11AM-12PM | 
+| Ronn | jacob.r@husky.neu.edu | Wednesday, 12PM-1PM | Thursday, 12PM-1PM |
+| Himanshu | budhia.h@husky.neu.edu | Tuesday, 4PM-5PM | Monday, 12PM-1PM |
+| Dania | abuhijleh.d@husky.neu.edu | Monday, 9AM-10AM | Wednesday, 9AM-10AM |
+| Drew | bodmer.d@husky.neu.edu | Thursday, 10AM-11AM | Monday, 3PM-4PM |
+| Angela | gross.an@husky.neu.edu | Wednesday, 12PM-1PM | Friday,Friday 2PM-3PM |
+| Luke | boyer.l@husky.neu.edu | Monday, 7PM-8PM | Tuesday, 8PM-9PM |
+| Kevin | hui.k@husky.neu.edu | Wednesday, 6PM-7PM | Thursday, 6PM-7PM |
+
+
+
+
+
 
 
 ##  Content Overview
@@ -53,7 +69,7 @@ This is an introductory course in algorithms. Although any computer program can 
 
 Specific topics typically include:
 
-* Basics tools for analysis of algorithms: proof by induction, asymptotic notation
+* Basic tools for analysis of algorithms: proof by induction, asymptotic notation
 * Divide-and-conquer algorithms
 * Dynamic programming
 * Stable matching: the Gale-Shapley Algorithm
@@ -66,13 +82,13 @@ Specific topics typically include:
 ## Textbook
 I will assign readings from [Jeff Erickson's Algorithms book](http://jeffe.cs.illinois.edu/teaching/algorithms/#book), which is freely availabe online. I may also assign reading from the online version of [Introduction to Algorithms by Cormen, Leiserson, and Rivest](http://staff.ustc.edu.cn/~csli/graduate/algorithms/book6/toc.htm), which is a standard reference for an algorithms course (commonly referred to as CLR).
 
-Originally, I was planning to assign readings from [Algorithm Design by Kleinberg and Tardos](https://www.barnesandnoble.com/w/algorithm-design-jon-kleinberg/1100018432). Given the difficulty (and questionable morality) of acquiring books at the present moment, as well as potential for inequity in the ability of students living in different geographic areas to acqurie the book, it is *not* required. If you can get an electronic version, or if you already have a copy, it will likely be a helpful resource and I encourage you to peruse it.
+Originally, I was planning to assign readings from [Algorithm Design by Kleinberg and Tardos](https://www.barnesandnoble.com/w/algorithm-design-jon-kleinberg/1100018432). Given the difficulty (and questionable morality) of acquiring books at the present moment, as well as potential for inequity in the ability of students living in different geographic areas to get the book, it is *not* required. If you can get an electronic version, or if you already have a copy, it will likely be a helpful resource and I encourage you to peruse it.
 
-## Important Links
-Canvas: TBD
+## Canvas
+Outside of Zoom lectures, our course materials will be located on this webpage and Canvas. Everything you need should be in these two places. Generally I will prefer to update this webpage and use Canvas mostly for keeping track of assignment submissions and grades. If you are unable to access Canvas, let me know in an email.
 
 ## Accessibility
-I will accomodate any and all accessibility requrests to the best of my ability. Some accomodation requests should come to me via the University. However, if you have an accomodation request that would not be officially communicated to me via the University, or if you would like to talk to me about University accomodation, please feel free to contact me about it.
+As the instructor of the course, I am committed to maintaining a positive learning environment based upon communication, mutual learning, and respect. Any suggestions as to how to further such a positive and open environment in this class will be appreciated and given serious consideration. The university does not discriminate on the basis of race, sex, age, disability, religion, sexual orientation, color, or national origin. If you are a person with a disability and anticipate needing any type of accommodation in order to participate in this class, please advise me and make appropriate arrangements with Disability Resource Center (617) 373-4428. I will accomodate any and all accessibility requrests to the best of my ability. Some accomodation requests should come to me via the University. However, if you have an accomodation request that would not be officially communicated to me via the University, or if you would like to talk to me about University accomodation, please feel free to contact me about it.
 
 ## More details on course structure
 I encourage you to consider "choosing" between two ways to take this course:
@@ -97,15 +113,31 @@ More information about what to expect:
     * We will do some sort of recitation, most likely a brief rehash of the topics we covered and a Q&A session, before each exam is released.
 
 ## Detailed homework policies
-* All homework solutions must be typeset in LaTeX. I will provide the source files for the HW assignments to help you get started. Learning LaTeX can take some time, but is well worth the investment, since most technical publications are written in LaTeX. Great editors exist on most platforms. I use TeXstudio on Mac and have heard that it is good across platforms. The [not so short introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf) is a good reference to get you started.
+* All homework solutions must be typeset in LaTeX. I will provide the source files for the HW assignments to help you get started. Learning LaTeX can take some time, but is well worth the investment, since most technical publications are written in LaTeX. Great editors exist on most platforms. I use TeXstudio on Mac and have heard that it is good across platforms. [Overleaf](overleaf.com) is a nice online TeX editor, like Google Docs for TeX. The [not so short introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf) is a good reference to get you started.
 * I encourage you to work with your classmates on the homework problems. If you do collaborate, you must write all solutions by yourself, in your own words, and are strictly forbidden from sharing any written solutions. You must list all of your collaborators on your submission. The TAs and I reserve the right to ask you explain your solutions.
+* If you use an online resource to develop your solution, please note it somehow in your submission, including the URL.
 * The lowest homework score will be dropped from your grade.
 * Given that our course runs on a very compressed timeline, it is important that work is turned in on time. Extensions will be considered only if asked for in advance of the deadline and granted on a case by case basis. Please do your best to plan ahead and try to ask for permission rather than forgiveness!
+
+## General Plagiarism Policy
+I take academic honesty seriously, and you should too. The Northeastern University Policy on Academic Integrity can be found at: [http://www.northeastern.edu/osccr/academic-integrity-policy/](http://www.northeastern.edu/osccr/academic-integrity-policy/)
+
+In general, in this course it is not considered cheating if you: 
+
+* Work together on homework assignments, as long as you each work out and submit your own final answers, noting your collaborators
+* Get help from professors, peers, tutors, etc. on the homework assignments 
+* Work together on preparing for quizzes and exams
+
+It is considered cheating if you:
+
+* Submit work done by others (without your participation) as your own
+* Submit the same writeup as others, regardless of whether you note that you collaborated
+* Copy or collaborate on exams 
 
 ## Grading
 The final course grade will be computed based on a weighted average of:
 
-*  homework (45%)
+* homework (45%)
 * two midterms (15% each)
 * final exam (25%)
 
