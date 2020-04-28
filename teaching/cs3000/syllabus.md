@@ -42,7 +42,7 @@ All TAs will hold office hours weekly. Times are subject to change, but we will 
 
 | Name | email | Office Hour 1 | Office Hour 2 |
 | --- | --- | --- | --- |
-| Saurabha | jirgi.s@husky.neu.edu | Wednesday, 10AM-11PM | Thursday, 11AM-12PM | 
+| Saurabha | jirgi.s@husky.neu.edu | Wednesday, 10AM-11AM | Thursday, 11AM-12PM | 
 | Ronn | jacob.r@husky.neu.edu | Wednesday, 12PM-1PM | Thursday, 12PM-1PM |
 | Himanshu | budhia.h@husky.neu.edu | Tuesday, 4PM-5PM | Monday, 12PM-1PM |
 | Dania | abuhijleh.d@husky.neu.edu | Monday, 9AM-10AM | Wednesday, 9AM-10AM |
