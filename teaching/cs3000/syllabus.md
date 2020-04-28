@@ -53,10 +53,6 @@ All TAs will hold office hours weekly. Times are subject to change, but we will 
 
 
 
-
-
-
-
 ##  Content Overview
 This is an introductory course in algorithms. Although any computer program can be viewed as an implementation of an algorithm for solving a particular computational problem, in this course we focus not on the programs themselves but on the underlying computational problems, and general algorithmic techniques for solving these problems. In this course, we will:
 
