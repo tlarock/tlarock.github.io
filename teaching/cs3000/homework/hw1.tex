@@ -1,0 +1,317 @@
+\documentclass[11pt]{article}
+
+\newcommand{\yourname}{}
+\newcommand{\yourcollaborators}{}
+
+\def\comments{0}
+
+%format and packages
+
+%\usepackage{algorithm, algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage{kpfonts}
+\usepackage{palatino}
+	\DeclareMathAlphabet{\mathtt}{OT1}{cmtt}{m}{n}
+	\SetMathAlphabet{\mathtt}{bold}{OT1}{cmtt}{bx}{n}
+	\DeclareMathAlphabet{\mathsf}{OT1}{cmss}{m}{n}
+	\SetMathAlphabet{\mathsf}{bold}{OT1}{cmss}{bx}{n}
+	\renewcommand*\ttdefault{cmtt}
+	\renewcommand*\sfdefault{cmss}
+	\renewcommand{\baselinestretch}{1.05}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkGreen}{rgb}{0.15,0.5,0.15}
+\definecolor{DarkRed}{rgb}{0.6,0.2,0.2}
+\definecolor{DarkBlue}{rgb}{0.2,0.2,0.6}
+\definecolor{DarkPurple}{rgb}{0.4,0.2,0.4}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+	linktocpage=true,
+	colorlinks=true,				% false: boxed links; true: colored links
+	linkcolor=DarkBlue,		% color of internal links
+	citecolor=DarkBlue,	% color of links to bibliography
+	urlcolor=DarkBlue,		% color of external links
+}
+
+\usepackage[boxruled,vlined,nofillcomment]{algorithm2e}
+	\SetKwProg{Fn}{Function}{\string:}{}
+	\SetKwFor{While}{While}{}{}
+	\SetKwFor{For}{For}{}{}
+	\SetKwIF{If}{ElseIf}{Else}{If}{:}{ElseIf}{Else}{:}
+	\SetKw{Return}{Return}
+	
+
+%enclosure macros
+\newcommand{\paren}[1]{\ensuremath{\left( {#1} \right)}}
+\newcommand{\bracket}[1]{\ensuremath{\left\{ {#1} \right\}}}
+\renewcommand{\sb}[1]{\ensuremath{\left[ {#1} \right\]}}
+\newcommand{\ab}[1]{\ensuremath{\left\langle {#1} \right\rangle}}
+
+%probability macros
+\newcommand{\ex}[2]{{\ifx&#1& \mathbb{E} \else \underset{#1}{\mathbb{E}} \fi \left[#2\right]}}
+\newcommand{\pr}[2]{{\ifx&#1& \mathbb{P} \else \underset{#1}{\mathbb{P}} \fi \left[#2\right]}}
+\newcommand{\var}[2]{{\ifx&#1& \mathrm{Var} \else \underset{#1}{\mathrm{Var}} \fi \left[#2\right]}}
+
+%useful CS macros
+\newcommand{\poly}{\mathrm{poly}}
+\newcommand{\polylog}{\mathrm{polylog}}
+\newcommand{\zo}{\{0,1\}}
+\newcommand{\pmo}{\{\pm1\}}
+\newcommand{\getsr}{\gets_{\mbox{\tiny R}}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\negl}{\mathrm{negl}}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\eqand}{\qquad \textrm{and} \qquad}
+\newcommand{\ind}[1]{\mathbb{I}\{#1\}}
+\newcommand{\sslash}{\ensuremath{\mathbin{/\mkern-3mu/}}}
+
+%info theory macros
+\newcommand{\SD}{\mathit{SD}}
+\newcommand{\sd}[2]{\SD\left( #1 , #2 \right)}
+\newcommand{\KL}{\mathit{KL}}
+\newcommand{\kl}[2]{\KL\left(#1 \| #2 \right)}
+\newcommand{\CS}{\ensuremath{\chi^2}}
+\newcommand{\cs}[2]{\CS\left(#1 \| #2 \right)}
+\newcommand{\MI}{\mathit{I}}
+\newcommand{\mi}[2]{\MI\left(~#1~;~#2~\right)}
+
+%mathbb
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+%mathcal
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%theorem macros
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+	\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+\theoremstyle{theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{sol}{Solution}
+
+\newcommand{\course}{\href{https://tlarock.github.io/teaching/cs3000/syllabus.html}{CS 3000: Algorithms \& Data}}
+\newcommand{\instructor}{Tim LaRock}
+\newcommand{\semester}{Summer 1 '20}
+
+\newcommand{\hwnum}{1}
+\newcommand{\hwdue}{Due Monday May 11 at 11:59pm Boston time via Canvas}
+
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\newcommand{\solution}{\medskip\noindent{\color{DarkBlue}\textbf{Solution:}}}
+
+\begin{document}
+{\Large 
+\begin{center} \course\ --- \semester\ --- \instructor \end{center}}
+{\large
+\vspace{10pt}
+\noindent Homework~\hwnum \vspace{2pt}\\
+Due~\hwdue}
+
+\bigskip
+{\large
+\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+
+\vspace{15pt}
+\begin{itemize}
+
+\item Make sure to put your name on the first page.  If you are using the \LaTeX~template we provided, then you can make sure it appears by filling in the \texttt{yourname} command.
+
+\item This assignment is due~\hwdue.  Make sure to submit something before the deadline.
+
+\item Solutions must be typeset in \LaTeX.  If you need to draw any diagrams, you may draw them by hand as long as they are embedded in the PDF.  I recommend using the source file for this assignment to get started.
+
+\item I encourage you to work with your classmates on the homework problems. \emph{If you do collaborate, you must write all solutions by yourself, in your own words.}  Do not submit anything you cannot explain.  Please list all your collaborators in your solution for each problem by filling in the \texttt{yourcollaborators} command.
+
+\item Finding solutions to homework problems on the web, or by asking students not enrolled in the class, is strictly forbidden.
+
+
+\end{itemize}
+
+\newpage
+\begin{prob} Inductive Proofs \end{prob}
+\begin{enumerate}[label=(\alph*)]
+\item Prove the following statement by induction: For every $n \in \N$, $\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$
+
+\solution 
+
+\item Prove the following statement by induction: For every $n \in \N$, $\sum_{i=1}^{n} \frac{1}{i^2} \leq 2 - \frac{1}{n}$
+
+\solution
+
+\item In class I showed a plot that implies the following statement is true: ``polynomials are smaller than exponentials.'' Specifically, $n^a = O(b^n)$ for every $a > 0$ and $b > 1$.  In this problem you will use induction to prove a special case of this fact, that $n^2 = O(2^n)$, by induction. 
+
+Prove by induction that, for every $n \geq 4$, $n^2 \leq 2^n$.
+
+\solution
+\end{enumerate}
+
+
+\newpage
+
+\newpage
+\begin{prob} Asymptotic Order of Growth \end{prob}
+\begin{enumerate}[label=(\alph*)]
+\item Rank the following functions in increasing order of asymptotic growth rate.  That is, find an ordering $f_1, f_2, \ldots, f_{10}$ of the functions so that $f_i = O(f_{i+1})$. No justification is required.
+
+\begin{center}
+\begin{tabular}{ccccc}
+$n^{5/2}$ & $4^{\log_2 n}$ & $n!$ & $7^n$ & $\log_2 (n!)$  \\
+$2^{3n}$ & $n^{2} \log_2(n)$ & $8n$ & $3^{\log_5 n}$ & $\log_2(n^3)$
+\end{tabular}
+\end{center}
+
+\solution
+
+\item Consider the following piece of code.
+
+\begin{algorithm}[H]
+	\caption{Waste some time}
+	\Fn{$A(n)$}{
+		Let $m$ be the smallest power of $2$ that is at least $n$ ($m = 2^{\lceil \log_2 n \rceil}$)
+		
+		\lFor{$i = 1, \dots, m^3:$}{Do an operation \DontPrintSemicolon}
+	}
+\end{algorithm}
+
+Give an asymptotic expression for the number of operations done by $A(n)$ as a function of $n$ in $\Theta(\cdot)$ notation.  Justify your answer.  Your expression should be as simple as possible---for example, $\Theta(n)$ would be a better than $\Theta(100n + 10)$.
+
+\solution
+
+\end{enumerate}
+
+\newpage
+\begin{prob} What Does This Code Do? \end{prob}
+
+You encounter the following mysterious piece of code.
+
+\begin{algorithm}[H]
+\caption{Mystery function}
+\Fn{$C(a,n)$}{
+	\uIf{$n=1$}{\Return $(1,a)$} 
+	\uElseIf{$n=2$}{\Return $(a,a\cdot a)$} 
+	\uElseIf{$n$ is odd}{
+		$(u,v) \gets C(a, \lfloor \frac{n+1}{2} \rfloor)$\\
+		\Return $(u \cdot u, u \cdot v)$
+	}\ElseIf{$n$ is even}{
+		$(u,v) \gets C(a, \lfloor \frac{n+1}{2} \rfloor)$\\
+		\Return $(u \cdot v, v \cdot v)$
+	}
+}
+\end{algorithm}
+
+\begin{enumerate}[label=(\alph*)]
+\item What are the results of $C(a,3)$, $C(a,4)$, and $C(a,5)$.  You do not need to justify your answers.
+
+\solution
+
+\item What does the code do in general? Prove your assertion by induction on $n$.
+
+\solution
+
+\item In this problem you will analyze the running time of $C$ as a function of $n$.  Prove that, for every $n \in \N$, the number of multiplication operations performed in evaluating $C(a,n)$ is at most $2 \cdot \log_2(n-1)+1$ (where we use the convention that $\log_2(0) = 0$).
+
+\solution
+
+
+\end{enumerate}
+
+\newpage
+\begin{prob}  IRL Divide and Conquer \end{prob}
+
+\noindent A professor teaching an in-person class wants to count the number of students physically present in the class. They came up with two plausible ways to count. In this question, you will analyze the correctness and running time of these two solutions with respect to $n$, the number of students in the class.
+
+\begin{algorithm}[H]
+	\caption{SimpleCounting}
+ 	Find first student \\
+ 	First student says 1 \\
+	\While{Students remain}{
+		Find the next student \\
+		Next student says (what last student said + 1) \\
+	}
+\end{algorithm}
+
+\begin{enumerate}[label=(\alph*)]
+
+\item A \emph{loop invariant} is a condition that holds true before and after every iteration of a loop. We can often use loop invariants to help explain why an algorithm must produce correct output. Identify such a loop invariant in SimpleCounting and use it to explain (informally) why the algorithm is correct.
+
+\solution
+
+\item What is the running time of SimpleCounting with respect to the number of students in the class $n$? Provide your answer in big-O notation and explain in words why this is the case.
+
+\solution
+
+\end{enumerate}
+
+\begin{algorithm}[H]
+	\caption{FancyCounting}
+	Everyone initialize their number to 1\\
+	Everyone stand up \\
+	\While{Someone is standing}{
+		Try to pair with your neighbor \\
+		\If{You are not in a pair} {Stay standing}
+		\Else{
+			Sum up your numbers \\
+			Sit down if you are the tallest person in the pair \\
+		}
+	}
+	If you are standing, say your number
+\end{algorithm}
+
+
+\begin{enumerate}[label=(\alph*)]
+
+\item As above, identify an appropriate loop invariant in FancyCounting and use it to explain why the algorithm is correct. It would be sufficient, but is \textbf{not} necessary, to provide a formal proof of correctness.
+
+\solution
+
+\item Write down a recurrence relation that describes the asymptotic runtime of FancyCounting as the number of students in the class ($n$) grows. 
+
+\solution
+
+
+\item Based on your recurrence relation above, what is the asymptotic runtime of FancyCounting? Optional: Prove it by induction for a bonus point.
+
+\solution
+
+\item Optional: For a bonus point, explain what it is about Zoom that makes it very difficult to run FancyCounting. Hint: The answer is \textbf{not} because people can't stand up; replace ``stand up'' with ``raise hand.''
+
+\solution
+
+\end{enumerate}
+\end{document}
