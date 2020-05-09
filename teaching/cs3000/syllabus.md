@@ -33,24 +33,42 @@ If you feel you need significant help, or would just prefer a 1-1 or small group
 
 
 ##### Teaching Assistants
-There will be multiple TAs for the course. They are available as a resource for you as well, please reach out to them. TAs will be available to help you and will handle grading of homework and exams.
+There are 8 TAs for the course. They are available as a resource for you as well, please reach out to them. TAs will be available to help you and will handle grading of homework and exams.
+
+| Name | email |
+| --- | --- |
+| Saurabha | jirgi.s@husky.neu.edu |
+| Ronn | jacob.r@husky.neu.edu | 
+| Himanshu | budhia.h@husky.neu.edu | 
+| Dania | abuhijleh.d@husky.neu.edu |
+| Drew | bodmer.d@husky.neu.edu |
+| Angela | gross.an@husky.neu.edu |
+| Luke | boyer.l@husky.neu.edu |
+| Kevin | hui.k@husky.neu.edu |
 
 
 
-###### TA Office Hours
-All TAs will hold office hours weekly. Times are subject to change, but we will try to keep the below table updated and announce when changes are made.
 
-| Name | email | Office Hour 1 | Office Hour 2 |
-| --- | --- | --- | --- |
-| Saurabha | jirgi.s@husky.neu.edu | Wednesday, 10AM-11AM | Thursday, 11AM-12PM | 
-| Ronn | jacob.r@husky.neu.edu | Wednesday, 12PM-1PM | Thursday, 12PM-1PM |
-| Himanshu | budhia.h@husky.neu.edu | Tuesday, 4PM-5PM | Monday, 12PM-1PM |
-| Dania | abuhijleh.d@husky.neu.edu | Monday, 9AM-10AM | Wednesday, 9AM-10AM |
-| Drew | bodmer.d@husky.neu.edu | Thursday, 10AM-11AM | Monday, 3PM-4PM |
-| Angela | gross.an@husky.neu.edu | Wednesday, 12PM-1PM | Friday,Friday 2PM-3PM |
-| Luke | boyer.l@husky.neu.edu | Monday, 7PM-8PM | Tuesday, 8PM-9PM |
-| Kevin | hui.k@husky.neu.edu | Wednesday, 6PM-7PM | Thursday, 6PM-7PM |
+###### Office Hours Schedule
+All office hours will be conducted on Zoom. You can find the Zoom room links on Piazza under Resources --> Staff.
 
+To make it easier for us to be prepared: please email the person whose office hours you will attend beforehand with some information about which questions or topics you want to discuss!
+
+All times Boston time.
+
+| Time     | Monday  |    Tuesday    | Wednesday       | Thursday | Friday |
+|  ---     |  ---    |     ---       |    ---          |   ---    |  ---   |
+| 9AM-10AM | Dania   |     ---       |    Tim          |   Drew   |  ---   |
+| 10AM-11AM|  ---    |     ---       |   Dania         | Saurabha |  ---   |
+| 11AM-12PM| ---     |     ---       |  Saurabha       |   Ronn   |  ---   |
+| 12PM-1PM | Himanshu|     ---       | Ronn, Angela    |    ---   |  ---   |
+| 1PM-2PM  | ---     |     ---       |    ---          |    ---   |  Tim   |
+| 2PM-3PM  | ---     |     ---       |    ---          |    ---   | Angela | 
+| 3PM-4PM  | Drew    |     ---       |    ---          |    ---   |  ---   |
+| 4PM-5PM  | ---     | Tim, Himanshu |    Kevin        |   Kevin  |  ---   |
+| 6PM-7PM  | ---     |     ---       |    ---          |    ---   |  ---   |
+| 7PM-8PM  | Luke    |               |    ---          |    ---   |  ---   |
+| 8PM-9PM  | ---     |     Luke      |    ---          |    ---   |  ---   |
 
 
 ##  Content Overview
@@ -81,7 +99,10 @@ I will assign readings from [Jeff Erickson's Algorithms book](http://jeffe.cs.il
 Originally, I was planning to assign readings from [Algorithm Design by Kleinberg and Tardos](https://www.barnesandnoble.com/w/algorithm-design-jon-kleinberg/1100018432). Given the difficulty (and questionable morality) of acquiring books at the present moment, as well as potential for inequity in the ability of students living in different geographic areas to get the book, it is *not* required. If you can get an electronic version, or if you already have a copy, it will likely be a helpful resource and I encourage you to peruse it.
 
 ## Canvas
-Outside of Zoom lectures, our course materials will be located on this webpage and Canvas. Everything you need should be in these two places. Generally I will prefer to update this webpage and use Canvas mostly for keeping track of assignment submissions and grades. If you are unable to access Canvas, let me know in an email.
+Outside of Zoom lectures, our course materials will be located on this webpage and Canvas. Generally I will prefer to update this webpage and use Canvas mostly for keeping track of assignment submissions and grades. If you are unable to access Canvas, let me know in an email.
+
+## Piazza
+We are using [Piazza](piazza.com) for question and answer. If you are in the class but not enrolled in Piazza, send me an email.
 
 ## Accessibility
 As the instructor of the course, I am committed to maintaining a positive learning environment based upon communication, mutual learning, and respect. Any suggestions as to how to further such a positive and open environment in this class will be appreciated and given serious consideration. The university does not discriminate on the basis of race, sex, age, disability, religion, sexual orientation, color, or national origin. If you are a person with a disability and anticipate needing any type of accommodation in order to participate in this class, please advise me and make appropriate arrangements with Disability Resource Center (617) 373-4428. I will accomodate any and all accessibility requrests to the best of my ability. Some accomodation requests should come to me via the University. However, if you have an accomodation request that would not be officially communicated to me via the University, or if you would like to talk to me about University accomodation, please feel free to contact me about it.
