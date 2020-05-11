@@ -12,7 +12,7 @@
 | 5/5/2020 | Divide And Conquer | HW1 ([tex](homework/hw1.tex), [pdf](homework/hw1.pdf)) | --- | Erickson Finish Chapter 1; CLR 1---2 | [pdf](slides/Lecture02.pdf) | [pdf](slides/Lecture02_withNotes.pdf) |  
 | 5/6/2020 | Asymptotic Analysis | --- | --- | Erickson Finish Chapter 1; CLR 1-2 | [pdf](slides/Lecture03.pdf) | [pdf](slides/Lecture03_withNotes.pdf) |  
 | 5/7/2020 | Recurrence Relations | --- | --- | --- | [pdf](slides/Lecture04.pdf) | [pdf](slides/Lecture04_withNotes.pdf) | 
-| 5/11 | Wrapping up Divide and Conquer | --- | HW1 (midnight) | --- | --- | --- |
+| 5/11 | More Recursion | --- | HW1 (midnight) | Erickson Chapter 2 | [pdf](slides/Lecture05.pdf) | [pdf](slides/Lecture05_withNotes.pdf)  |
 
 [//]: # (|5/12|Backtracking: Subset Sum; Introduce Dynamic programming: Fibnacci numbers; Subset Sum|HW2: Dynamic Programming| --- | --- | --- | --- |
 |5/13|Edit distance; Knapsack problem|---| --- | --- | --- | --- |
