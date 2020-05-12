@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+
+\newcommand{\yourname}{}
+\newcommand{\yourcollaborators}{}
+
+\def\comments{0}
+
+%format and packages
+
+%\usepackage{algorithm, algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage{kpfonts}
+\usepackage{palatino}
+\usepackage{listings}
+\lstset
+{
+	language=[LaTeX]TeX,
+	breaklines=true,
+	basicstyle=\tt\scriptsize,
+	keywordstyle=\color{blue},
+	identifierstyle=\color{magenta},
+}
+
+	\DeclareMathAlphabet{\mathtt}{OT1}{cmtt}{m}{n}
+	\SetMathAlphabet{\mathtt}{bold}{OT1}{cmtt}{bx}{n}
+	\DeclareMathAlphabet{\mathsf}{OT1}{cmss}{m}{n}
+	\SetMathAlphabet{\mathsf}{bold}{OT1}{cmss}{bx}{n}
+	\renewcommand*\ttdefault{cmtt}
+	\renewcommand*\sfdefault{cmss}
+	\renewcommand{\baselinestretch}{1.05}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkGreen}{rgb}{0.15,0.5,0.15}
+\definecolor{DarkRed}{rgb}{0.6,0.2,0.2}
+\definecolor{DarkBlue}{rgb}{0.2,0.2,0.6}
+\definecolor{DarkPurple}{rgb}{0.4,0.2,0.4}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+	linktocpage=true,
+	colorlinks=true,				% false: boxed links; true: colored links
+	linkcolor=DarkBlue,		% color of internal links
+	citecolor=DarkBlue,	% color of links to bibliography
+	urlcolor=DarkBlue,		% color of external links
+}
+
+\usepackage[boxruled,vlined,nofillcomment]{algorithm2e}
+	\SetKwProg{Fn}{Function}{\string:}{}
+	\SetKwFor{While}{While}{}{}
+	\SetKwFor{For}{For}{}{}
+	\SetKwIF{If}{ElseIf}{Else}{If}{:}{ElseIf}{Else}{:}
+	\SetKw{Return}{Return}
+	
+
+%enclosure macros
+\newcommand{\paren}[1]{\ensuremath{\left( {#1} \right)}}
+\newcommand{\bracket}[1]{\ensuremath{\left\{ {#1} \right\}}}
+\renewcommand{\sb}[1]{\ensuremath{\left[ {#1} \right\]}}
+\newcommand{\ab}[1]{\ensuremath{\left\langle {#1} \right\rangle}}
+
+%probability macros
+\newcommand{\ex}[2]{{\ifx&#1& \mathbb{E} \else \underset{#1}{\mathbb{E}} \fi \left[#2\right]}}
+\newcommand{\pr}[2]{{\ifx&#1& \mathbb{P} \else \underset{#1}{\mathbb{P}} \fi \left[#2\right]}}
+\newcommand{\var}[2]{{\ifx&#1& \mathrm{Var} \else \underset{#1}{\mathrm{Var}} \fi \left[#2\right]}}
+
+\newcommand{\opt}{\textsc{opt}}
+	
+%useful CS macros
+\newcommand{\poly}{\mathrm{poly}}
+\newcommand{\polylog}{\mathrm{polylog}}
+\newcommand{\zo}{\{0,1\}}
+\newcommand{\pmo}{\{\pm1\}}
+\newcommand{\getsr}{\gets_{\mbox{\tiny R}}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\negl}{\mathrm{negl}}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\eqand}{\qquad \textrm{and} \qquad}
+\newcommand{\ind}[1]{\mathbb{I}\{#1\}}
+\newcommand{\sslash}{\ensuremath{\mathbin{/\mkern-3mu/}}}
+
+%info theory macros
+\newcommand{\SD}{\mathit{SD}}
+\newcommand{\sd}[2]{\SD\left( #1 , #2 \right)}
+\newcommand{\KL}{\mathit{KL}}
+\newcommand{\kl}[2]{\KL\left(#1 \| #2 \right)}
+\newcommand{\CS}{\ensuremath{\chi^2}}
+\newcommand{\cs}[2]{\CS\left(#1 \| #2 \right)}
+\newcommand{\MI}{\mathit{I}}
+\newcommand{\mi}[2]{\MI\left(~#1~;~#2~\right)}
+
+%mathbb
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+%mathcal
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%theorem macros
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+	\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+\theoremstyle{theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{sol}{Solution}
+
+\newcommand{\course}{\href{https://tlarock.github.io/teaching/cs3000/syllabus.html}{CS 3000: Algorithms \& Data}}
+\newcommand{\instructor}{Tim LaRock}
+\newcommand{\semester}{Summer 1 '20}
+
+\newcommand{\hwnum}{2}
+\newcommand{\hwdue}{Tuesday, May 19 at 11:59pm via Canvas}
+
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\newcommand{\solution}{\medskip\noindent{\color{DarkBlue}\textbf{Solution:}}}
+
+
+
+\begin{document}
+{\Large 
+\begin{center} \course\ --- \semester\ --- \instructor \end{center}}
+{\large
+\vspace{10pt}
+\noindent Homework~\hwnum \vspace{2pt}\\
+Due~\hwdue}
+
+\bigskip
+{\large
+\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+
+\vspace{15pt}
+\begin{itemize}
+
+\item Make sure to put your name on the first page.  If you are using the \LaTeX~template we provided, then you can make sure it appears by filling in the \texttt{yourname} command.
+
+\item This assignment is due~\hwdue.  Make sure to submit something before the deadline.
+
+\item Solutions must be typeset in \LaTeX.  If you need to draw any diagrams, you may draw them by hand as long as they are embedded in the PDF.  I recommend using the source file for this assignment to get started.
+
+\item I encourage you to work with your classmates on the homework problems. \emph{If you do collaborate, you must write all solutions by yourself, in your own words.}  Do not submit anything you cannot explain.  Please list all your collaborators in your solution for each problem by filling in the \texttt{yourcollaborators} command.
+
+\item Finding solutions to homework problems on the web, or by asking students not enrolled in the class, is strictly forbidden.
+
+\end{itemize}
+
+\newpage
+\begin{prob} Recurrences \end{prob}
+
+Suppose we have algorithms with running times $T(n)$ given by the recurrences:
+\begin{align*}
+&T(n) = 36 T(n/6) + n^2 \\
+&T(n) = 8 T(n/3) + n \\
+&T(n) = 7 T(n/7) + n \\
+&T(n) = 11 T(n/5) + n^2\\
+&T(n) = 3 T(n/3) + 1
+\end{align*}
+Solve each recurrence using the master theorem and put these running times in ascending order $T_1, T_2,\dots,T_5$ so that $T_i = O(T_{i+1})$.
+
+\solution
+
+
+\newpage
+\begin{prob}Babysitting\end{prob}
+You are babysitting your niece and before she will go to bed she insists on playing the following guessing game:  
+\begin{enumerate}
+	\item She picks a number $x$ in $1,2,\dots,n$.  
+	\item You make a guess $y_1$, and she simply says \emph{correct} or \emph{incorrect}.
+	\item You make a sequence of guesses $y_2,y_3,\dots$.  If your guess $y_i = x$ then your neice says \emph{correct} and goes to bed.  If your guess $y_i$ is closer to $x$ than the previous guess $y_{i-1}$, then she says \emph{warmer} and if $y_{i+1}$ is farther than the previous guess, then she says \emph{colder}.
+\end{enumerate}
+Your goal is to find $x$ with as few guesses as possible so that your niece will go to bed.  Design a divide-and-conquer algorithm that guesses your niece's number using $O(\log n)$ guesses.\footnote{{\bf Hint:} You are allowed to guess negative numbers and numbers larger than $n$, although there are also correct solutions that do not use this option.}
+
+\begin{enumerate}[label=(\alph*)]
+	\item Describe your algorithm in pseudocode.
+	
+	\solution
+	
+	\item Prove by induction that your algorithm correctly guesses the number.
+	
+	\solution
+	
+	\item Write a recurrence describing the number of guesses made by the algorithm, and solve the recurrence.  You may solve the recurrence using any method you like.
+	
+	\solution
+	
+\end{enumerate}
+
+
+
+\newpage
+\begin{prob}Addition Chains\end{prob}
+An \emph{addition chain} for an integer $n$ is a list of integers $\langle x_0, x_1, ..., x_l\rangle$ such that $x_0 = 1, x_l=n$  and for all indices $k>0$ there exist $i,j$ such that $i \leq j < k$ and $x_i + x_j = 	k$. For example, an addition chain for $n=24$  could be $\langle 1, 2, 3, 6, 12, 24 \rangle$.
+
+The length $l$ of an addition chain is the number of elements minus 1; we don’t bother to count the first entry, since it is the same for every chain. As another example, an addition chain of length $l=11$ for $n=374$ could be $\langle 1,2,3,5,10,20,23,46,92,184,187,374\rangle$.
+
+In this problem, you will propose and analyze a solution to find a minimum length addition chain for any positive integer $n$ using a recursive \emph{backtracking} strategy. 
+
+\begin{enumerate}[label=(\alph*)]
+	\item Give a minimum length addition chain for each of the following numbers: $$n=\{3, 4, 5, 20, 21, 100, 101\}$$
+	
+	\solution
+	
+	\item Design a recursive backtracking algorithm that computes a minimum length addition chain for any positive integer $n$. Include a proof of correctness, but do not worry about runtime yet (e.g. do not worry if you think your algorithm is very slow, as long as it uses backtracking).
+	
+	\solution
+	
+	\item Explain informally what makes your algorithm a backtracking algorithm. You may want to reference section 2.4 of the Erickson book to help guide your explanation. It is also okay to draw a picture if that helps, just please embed your entire solution in LaTeX (look up the macro \lstinline!\includegraphics! to embed a photo). 
+
+	\solution	
+	
+	\item Analyze the runtime of your algorithm. Do you think it is possible to speed it up? Explain.
+
+	\solution
+	
+	
+\end{enumerate}
+
+
+\newpage
+\begin{prob}Strategery\end{prob}
+
+Alice and Bob play the following game.  There is a row of $n$ tiles with values $a_1,\dots,a_n$ written on them.  Starting with Alice, Alice and Bob take turns removing either the first or last tile in the row and placing it in their pile until there are no tiles remaining.  For example, if Alice takes tile $1$, Bob can take either tile $2$ or tile $n$ on the next turn.  At the end of the game, each player receives a number of points equal to the sum of the values of their tiles minus that of the other player's tiles.  Specifically, if Alice takes tiles $A \subseteq \{1,\dots,n\}$ and Bob takes tiles $B = \{1,\dots,n\} \setminus A$, then their scores are
+$$
+\sum_{i \in A} a_i - \sum_{i \in B} a_i \quad \textrm{and} \quad \sum_{i \in B} a_i - \sum_{i \in A} a_i,
+$$
+respectively.  For example, if $n = 3$ and the tiles have numbers $10, 2, 8$ then taking the first tile guarantees Alice a score of at least $10 + 2 - 8 = 4$, whereas taking the last tile would only guarantee Alice a score of at least $8 + 2 - 10 = 0$.
+
+In this question, you will design an algorithm to determine the maximum score that Alice can guarantee for herself, assuming Bob plays optimally to maximize his score.\footnote{\textbf{Hint:} Note that the sum of their scores is always $0$, so if Bob is playing optimally to maximize his own score, then he is also playing optimally to minimize Alice's score.}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+	\item Describe the set of subproblems that your dynamic programming algorithm will consider.  Your solution should look something like ``For every \dots, we define $\	opt(\dots)$ to be \dots''
+	
+	\solution
+	
+	\item Give a recurrence expressing the solution to each subproblem in terms of the solution to smaller subproblems.
+	
+	\solution
+	
+	\item Explain in English a valid order to fill your dynamic programming table in a ``bottom-up'' implementation of the recurrence.
+	
+	\solution 
+	
+	\item Describe in pseudocode an algorithm that finds the maximum score that Alice can guarantee for herself.  Your implementation may be either ``bottom-up'' or ``top-down.''
+	
+	\solution
+	
+	\item Analyze the running time and space usage of your algorithm.
+	
+	\solution
+	
+\end{enumerate}
+
+\end{document}
