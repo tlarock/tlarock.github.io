@@ -58,11 +58,11 @@ All times Boston time.
 
 | Time     | Monday  |    Tuesday    | Wednesday       | Thursday | Friday |
 |  ---     |  ---    |     ---       |    ---          |   ---    |  ---   |
-| 9AM-10AM | Dania   |     ---       |    Tim          |   Drew   |  ---   |
+| 9AM-10AM | Dania   |     ---       |    Tim          |   ---   |  ---   |
 | 10AM-11AM|  ---    |     ---       |   Dania         | Saurabha |  ---   |
 | 11AM-12PM| ---     |     ---       |  Saurabha       |   Ronn   |  ---   |
 | 12PM-1PM | Himanshu|     ---       | Ronn, Angela    |    ---   |  ---   |
-| 1PM-2PM  | ---     |     ---       |    ---          |    ---   |  Tim   |
+| 1PM-2PM  | ---     |     ---       |    ---          |   Drew   |  Tim   |
 | 2PM-3PM  | ---     |     ---       |    ---          |    ---   | Angela | 
 | 3PM-4PM  | Drew    |     ---       |    ---          |    ---   |  ---   |
 | 4PM-5PM  | ---     | Tim, Himanshu |    Kevin        |   Kevin  |  ---   |
