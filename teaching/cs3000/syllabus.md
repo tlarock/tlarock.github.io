@@ -60,11 +60,11 @@ All times Boston time.
 |  ---     |  ---    |     ---       |    ---          |   ---    |  ---   |
 | 9AM-10AM | Dania   |     ---       |    Tim          |   ---   |  ---   |
 | 10AM-11AM|  ---    |     ---       |   Dania         | Saurabha |  ---   |
-| 11AM-12PM| ---     |     ---       |  Saurabha       |   Ronn   |  ---   |
+| 11AM-12PM| ---     |     ---       |  Saurabha       |   Ronn   |  Samar |
 | 12PM-1PM | Himanshu|     ---       | Ronn, Angela    |    ---   |  ---   |
 | 1PM-2PM  | ---     |     ---       |    ---          |   Drew   |  Tim   |
 | 2PM-3PM  | ---     |     ---       |    ---          |    ---   | Angela | 
-| 3PM-4PM  | Drew    |     ---       |    ---          |    ---   |  ---   |
+| 3PM-4PM  | Drew    |     ---       |    Samar        |    ---   |  ---   |
 | 4PM-5PM  | ---     | Tim, Himanshu |    Kevin        |   Kevin  |  ---   |
 | 6PM-7PM  | ---     |     ---       |    ---          |    ---   |  ---   |
 | 7PM-8PM  | Luke    |               |    ---          |    ---   |  ---   |
