@@ -13,7 +13,7 @@
 | 5/6/2020 | Asymptotic Analysis | --- | --- | Erickson Finish Chapter 1; CLR 1-2 | [pdf](slides/Lecture03.pdf) | [pdf](slides/Lecture03_withNotes.pdf) |  
 | 5/7/2020 | Recurrence Relations | --- | --- | --- | [pdf](slides/Lecture04.pdf) | [pdf](slides/Lecture04_withNotes.pdf) | 
 | 5/11 | More Recursion | --- | HW1 (midnight) | Erickson Chapter 2 | [pdf](slides/Lecture05.pdf) | [pdf](slides/Lecture05_withNotes.pdf)  |
-|5/12|Backtracking |HW2 ([tex](homework/hw2.tex), [pdf](homework/hw2.pdf)) | --- | Erickson Chapter 3 | [pdf](slides/Lecture06.pdf) | [pdf](slides/Lecture06_withNotes.pdf) |
+|5/12|Backtracking |HW2 ([tex (updated 5/15)](homework/hw2_updated.tex), [pdf (updated 5/15)](homework/hw2_updated.pdf)) | --- | Erickson Chapter 3 | [pdf](slides/Lecture06.pdf) | [pdf](slides/Lecture06_withNotes.pdf) |
 |5/13|Dynamic Programming|---| --- | --- | [pdf](slides/Lecture07.pdf) | [pdf](slides/Lecture07_withNotes.pdf) |
 |5/14|More dynamic programming|---| --- | --- | [pdf](slides/Lecture08.pdf) | [pdf](slides/Lecture08_withNotes.pdf) |
 
