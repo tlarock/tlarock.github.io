@@ -33,7 +33,7 @@ If you feel you need significant help, or would just prefer a 1-1 or small group
 
 
 ##### Teaching Assistants
-There are 8 TAs for the course. They are available as a resource for you as well, please reach out to them. TAs will be available to help you and will handle grading of homework and exams.
+There are 9 TAs for the course. They are available as a resource for you as well, please reach out to them. TAs will be available to help you and will handle grading of homework and exams.
 
 | Name | email |
 | --- | --- |
@@ -45,6 +45,7 @@ There are 8 TAs for the course. They are available as a resource for you as well
 | Angela | gross.an@husky.neu.edu |
 | Luke | boyer.l@husky.neu.edu |
 | Kevin | hui.k@husky.neu.edu |
+| Samar | dikshit.s@northeastern.edu |
 
 
 
