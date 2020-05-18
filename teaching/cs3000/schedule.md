@@ -17,14 +17,15 @@
 |5/13|Dynamic Programming|---| --- | --- | [pdf](slides/Lecture07.pdf) | [pdf](slides/Lecture07_withNotes.pdf) |
 |5/14|More dynamic programming|---| --- | --- | [pdf](slides/Lecture08.pdf) | [pdf](slides/Lecture08_withNotes.pdf) |
 |5/18|Even More dynamic programming|---| --- | --- | [pdf](slides/Lecture09.pdf) | [pdf](slides/Lecture09_withNotes.pdf) |
+|5/19|Finishing Dynamic Programming; Intro to Graph Algorithms|---| HW2 (midnight) | --- | --- | --- |
+|5/20|Graph Algorithms + Midterm 1 Q&A| Midterm 1 (8PM) | --- | --- | --- | --- |
+|5/21| No Class -- Take Home Midterm 1 |---| --- | --- | --- | --- |
+|5/22| Midterm 1 due 8PM Boston Time |---| --- | --- | --- | --- |
+|5/25| No Class -- Memorial Day|---| --- | --- | --- | --- |
 
 
-[//]: # (|5/18|Graph Algorithms: DFS; BFS; Topological sort|---| --- | --- | --- | --- |
-|5/19|Graph Algorithms: Shortest Paths|---| --- | --- | --- | --- |
-|5/20|Graph Algorithms: Dynamic Programming on Trees|---| --- | --- | --- | --- |
-|5/21|MIDTERM 1|---| --- | --- | --- | --- |
-|5/25|NO CLASS --- MEMORIAL DAY|---| --- | --- | --- | --- |
-|5/26|Finish graph algorithms; Introduce network flow|---| --- | --- | --- | --- |
+
+[//]: # (|5/26|Finish graph algorithms; Introduce network flow|---| --- | --- | --- | --- |
 |5/27|Network Flow|---| --- | --- | --- | --- |
 |5/28|Network Flow|---| --- | --- | --- | --- |
 |6/1|Network Flow|---| --- | --- | --- | --- |
