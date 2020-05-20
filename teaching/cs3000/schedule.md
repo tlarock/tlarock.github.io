@@ -18,7 +18,7 @@
 |5/14|More dynamic programming|---| --- | --- | [pdf](slides/Lecture08.pdf) | [pdf](slides/Lecture08_withNotes.pdf) |
 |5/18|Even More dynamic programming|---| --- | --- | [pdf](slides/Lecture09.pdf) | [pdf](slides/Lecture09_withNotes.pdf) |
 |5/19|Finishing Dynamic Programming; Intro to Graph Algorithms|---| HW2 (midnight) | --- | [pdf](slides/Lecture10.pdf) | [pdf](slides/Lecture10_withNotes.pdf) |
-|5/20|Graph Algorithms + Midterm 1 Q&A| Midterm 1 (8PM) | --- | --- | --- | --- |
+|5/20| Midterm 1 Q&A| Midterm 1 (8PM) | --- | --- | [pdf](slides/Lecture11.pdf) | [pdf](slides/Lecture11_withNotes.pdf) |
 |5/21| No Class -- Take Home Midterm 1 |---| --- | --- | --- | --- |
 |5/22| Midterm 1 due 8PM Boston Time |---| --- | --- | --- | --- |
 |5/25| No Class -- Memorial Day|---| --- | --- | --- | --- |
