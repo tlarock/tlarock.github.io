@@ -1,0 +1,330 @@
+\documentclass[11pt]{article}
+
+\newcommand{\yourname}{}
+\newcommand{\yourcollaborators}{}
+
+\def\comments{1}
+
+\newcommand{\course}{\href{tlarock.github.io/teaching/cs3000/syllabus.html}{CS 3000: Algorithms \& Data}}
+\newcommand{\instructor}{Tim LaRock}
+\newcommand{\semester}{Summer 1 '20}
+
+\newcommand{\hwnum}{5}
+\newcommand{\hwdue}{Monday June 1st at 11:59pm Boston time via Gradescope}
+
+%format and packages
+
+\usepackage{graphicx}
+%\usepackage{algorithm, algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage{kpfonts}
+\usepackage{palatino}
+	\DeclareMathAlphabet{\mathtt}{OT1}{cmtt}{m}{n}
+	\SetMathAlphabet{\mathtt}{bold}{OT1}{cmtt}{bx}{n}
+	\DeclareMathAlphabet{\mathsf}{OT1}{cmss}{m}{n}
+	\SetMathAlphabet{\mathsf}{bold}{OT1}{cmss}{bx}{n}
+	\renewcommand*\ttdefault{cmtt}
+	\renewcommand*\sfdefault{cmss}
+	\renewcommand{\baselinestretch}{1.05}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkGreen}{rgb}{0.15,0.5,0.15}
+\definecolor{DarkRed}{rgb}{0.6,0.2,0.2}
+\definecolor{DarkBlue}{rgb}{0.2,0.2,0.6}
+\definecolor{DarkPurple}{rgb}{0.4,0.2,0.4}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+	linktocpage=true,
+	colorlinks=true,				% false: boxed links; true: colored links
+	linkcolor=DarkBlue,		% color of internal links
+	citecolor=DarkBlue,	% color of links to bibliography
+	urlcolor=DarkBlue,		% color of external links
+}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\definecolor{processblue}{cmyk}{0.96,0,0,0}
+\usetikzlibrary{matrix,arrows}
+
+\ifnum\comments=1
+\newcommand{\mynote}[2]{\marginpar{{\color{#1} \tiny #2}}}
+\newcommand{\mybignote}[2]{{\color{#1} $\langle \langle$ #2~$\rangle \rangle$}}
+\else
+\newcommand{\mynote}[2]{}
+\newcommand{\mybignote}[2]{}
+\fi
+\newcommand{\jnote}[1]{\mynote{red}{Jon: {#1}}}
+\newcommand{\bigjnote}[1]{\mybignote{red}{Jon: #1}}
+
+
+\usepackage[boxruled,vlined,nofillcomment]{algorithm2e}
+	\SetKwProg{Fn}{Function}{\string:}{}
+	\SetKwFor{While}{While}{}{}
+	\SetKwFor{For}{For}{}{}
+	\SetKwIF{If}{ElseIf}{Else}{If}{:}{ElseIf}{Else}{:}
+	\SetKw{Return}{Return}
+	
+
+%enclosure macros
+\newcommand{\paren}[1]{\ensuremath{\left( {#1} \right)}}
+\newcommand{\bracket}[1]{\ensuremath{\left\{ {#1} \right\}}}
+\renewcommand{\sb}[1]{\ensuremath{\left[ {#1} \right\]}}
+\newcommand{\ab}[1]{\ensuremath{\left\langle {#1} \right\rangle}}
+
+%probability macros
+\newcommand{\ex}[2]{{\ifx&#1& \mathbb{E} \else \underset{#1}{\mathbb{E}} \fi \left[#2\right]}}
+\newcommand{\pr}[2]{{\ifx&#1& \mathbb{P} \else \underset{#1}{\mathbb{P}} \fi \left[#2\right]}}
+\newcommand{\var}[2]{{\ifx&#1& \mathrm{Var} \else \underset{#1}{\mathrm{Var}} \fi \left[#2\right]}}
+
+\newcommand{\opt}{\textsc{opt}}
+
+%useful CS macros
+\newcommand{\poly}{\mathrm{poly}}
+\newcommand{\polylog}{\mathrm{polylog}}
+\newcommand{\zo}{\{0,1\}}
+\newcommand{\pmo}{\{\pm1\}}
+\newcommand{\getsr}{\gets_{\mbox{\tiny R}}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\negl}{\mathrm{negl}}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\eqand}{\qquad \textrm{and} \qquad}
+\newcommand{\ind}[1]{\mathbb{I}\{#1\}}
+\newcommand{\sslash}{\ensuremath{\mathbin{/\mkern-3mu/}}}
+
+%info theory macros
+\newcommand{\SD}{\mathit{SD}}
+\newcommand{\sd}[2]{\SD\left( #1 , #2 \right)}
+\newcommand{\KL}{\mathit{KL}}
+\newcommand{\kl}[2]{\KL\left(#1 \| #2 \right)}
+\newcommand{\CS}{\ensuremath{\chi^2}}
+\newcommand{\cs}[2]{\CS\left(#1 \| #2 \right)}
+\newcommand{\MI}{\mathit{I}}
+\newcommand{\mi}[2]{\MI\left(~#1~;~#2~\right)}
+
+%mathbb
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+%mathcal
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%theorem macros
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+	\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+
+\theoremstyle{theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{sol}{Solution}
+
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\newcommand{\solution}{\medskip\noindent{\color{DarkBlue}\textbf{Solution:}}}
+
+\begin{document}
+{\Large 
+\begin{center} \course\ --- \semester\ --- \instructor \end{center}}
+{\large
+\vspace{10pt}
+\noindent Homework~\hwnum \vspace{2pt}\\
+Due~\hwdue}
+
+\bigskip
+{\large
+\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+
+\vspace{15pt}
+\begin{itemize}
+	
+	\item Make sure to put your name on the first page.  If you are using the \LaTeX~template we provided, then you can make sure it appears by filling in the \texttt{yourname} command.
+	
+	\item This assignment is due~\hwdue.  Make sure to submit something before the deadline.
+	
+	\item Solutions must be typeset in \LaTeX.  If you need to draw any diagrams, you may draw them by hand as long as they are embedded in the PDF.  I recommend using the source file for this assignment to get started.
+	
+	\item I encourage you to work with your classmates on the homework problems. \emph{If you do collaborate, you must write all solutions by yourself, in your own words.}  Do not submit anything you cannot explain.  Please list all your collaborators in your solution for each problem by filling in the \texttt{yourcollaborators} command.
+	
+	\item Finding solutions to homework problems on the web, or by asking students not enrolled in the class, is strictly forbidden.
+	
+\end{itemize}
+
+\newpage
+\begin{prob}Graph Representations and Exploration\end{prob}
+
+This problem tests your understanding of basic graph algorithms and concepts.
+
+\begin{enumerate} [label=(\alph*)]
+	\item Consider the following graph
+\begin{figure}[h!]
+	\begin{center}
+		\begin{tikzpicture}[node distance = 1.0 cm and 2.0cm,on grid,
+		thick,state/.style ={circle,top color =white,bottom color = processblue!20,draw,processblue,text=blue,minimum width =.3 cm}]
+		\node[state] (a) {1};
+		\node[state] (b) [yshift = 30pt, right =of a] {2};
+		\node[state] (c) [yshift = -30pt, right =of b] {3};
+		\node[state] (d) [below =of a, yshift=-14pt] {4};
+		\node[state] (e) [yshift = 20pt, right =of d] {5};
+		\node[state] (f) [yshift = -20pt, right =of e] {6};
+		\node[state] (g) [below =of e, xshift=-27pt,yshift=-25pt] {7};
+		\node[state] (h) [right =of g] {8};
+		\path (a) edge [bend left = 0] (b) 
+		edge [bend left = 0] (c) 
+		edge (d);
+		\path (b) edge [bend left = 0] (f);
+		\path (c) edge [bend left = 0] (e);
+		\path (d) edge [bend right = 50] (c) 
+		edge [bend left = 0] (e) 
+		edge (d);
+		\path (e) edge [bend left = 0] (h);
+		\path (g) edge [bend left = 0] (h);
+		\end{tikzpicture}
+	\end{center}
+\end{figure}
+
+\begin{enumerate}[label=(\roman*)]
+	\item Construct the adjacency matrix of this graph. {\bf Tip:} I included a snippet of code you can use to create a matrix in \LaTeX.
+	
+	\solution
+	\vspace{-15pt}
+	\[
+	\begin{bmatrix}
+	? & ? \\
+	? & ?
+	\end{bmatrix}
+	\]
+	
+	\item Construct the adjacency list of this graph.
+	
+	\solution
+	
+	\item BFS this graph starting from the node $1$.  Always choose the lowest-numbered node next.  Draw the BFS tree and label each node with its distance from $1$.
+	
+	\solution
+
+\end{enumerate}
+
+\end{enumerate}
+	
+\newpage
+\begin{prob}DFS and Topological Ordering\end{prob}
+
+\begin{figure}[h!]
+	\begin{center}
+		\begin{tikzpicture}[>= latex, node distance = 1.5 cm and 2.5cm,on grid, thick,state/.style ={circle,top color =white,bottom color = gray!20,draw,black,text=black,minimum width =1.0 cm}]
+		\node[state] (a) {a};
+		\node[state] (b) [right =of a] {b};
+		\node[state] (c) [right =of b] {c};
+		\node[state] (d) [below =of a,] {d};
+		\node[state] (e) [right =of d] {e};
+		\node[state] (f) [right =of e] {f};
+		\node[state] (g) [below =of d, yshift=-10] {g};
+		\node[state] (h) [right =of g] {h};
+		\node[state] (i) [right =of h] {i};
+		\tikzset{every node/.style={fill=white}} 
+		\path[->] 	(a) edge  				(b)
+		(a) edge				(e)
+		(b) edge				(c)
+		(c) edge [bend right=35]	(a)
+		(d) edge				(a)
+		(d) edge				(e)
+		(e) edge				(b)
+		(e) edge				(c)
+		(e) edge				(f)
+		(e) edge				(g)
+		(f) edge				(c)
+		(g) edge				(d)
+		(g) edge				(h)
+		(h) edge				(e)
+		(h) edge				(i)
+		(i) edge				(f);
+		\end{tikzpicture}
+	\end{center}
+\end{figure}
+
+Consider running depth-first search on this graph starting from node $a$.  When there are multiple choices for the next node to visit, go in alphabetical order.
+
+\begin{enumerate}[label=(\alph*)]
+	\item Label every edge as either tree, forward, backward, or cross.
+	
+	\solution
+	
+	\item Give the post-order numbers of all vertices
+	
+	\solution
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+			\hline
+			a & b & c & d & e & f & g & h & i \\ \hline
+			&  &  &  &  &  & &  &   \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\item Is this graph a DAG?  If so, give a topological ordering.
+	
+	\solution
+	
+\end{enumerate}
+
+\vfill
+\newpage
+\begin{prob}Graph Properties\end{prob}
+
+\renewcommand{\deg}{\mathit{deg}}
+
+Consider an undirected graph $G=(V,E)$. The {\em degree} of a vertex $v$ is the number of edges adjacent to $v$---that is, the number of edges of the form $(v,u) \in E$.  Recall the standard notational convention that $n = |V|$ and $m = |E|$.
+
+\begin{enumerate}[label=(\alph*)]
+	\item Prove by induction that the sum of the degrees of the vertices is equal to $2m$.
+	
+	\solution
+	
+	\item Prove that there are an even number of vertices whose degree is odd.
+	
+	\solution
+	
+	\item Let $v \in V$ be some vertex whose degree is odd.  Prove that there exists another vertex $u \in V$ such that $u$ has odd degree and there is a path connecting $v$ and $u$.
+	
+	\solution
+	
+\end{enumerate}
+
+
+
+\end{document}
