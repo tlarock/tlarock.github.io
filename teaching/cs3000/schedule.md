@@ -22,11 +22,11 @@
 |5/21| No Class -- Take Home Midterm 1 |---| --- | --- | --- | --- |
 |5/22| Midterm 1 due 8PM Boston Time |---| --- | --- | --- | --- |
 |5/25| No Class -- Memorial Day|---| --- | --- | --- | --- |
+5/26|Graph algorithms|HW3| --- | Erickson through Chapter 8.5 | [pdf](slides/Lecture12.pdf) | [pdf](slides/Lecture12_withNotes.pdf) |
 
 
 
-[//]: # (|5/26|Finish graph algorithms; Introduce network flow|---| --- | --- | --- | --- |
-|5/27|Network Flow|---| --- | --- | --- | --- |
+[//]: # (||5/27|Network Flow|---| --- | --- | --- | --- |
 |5/28|Network Flow|---| --- | --- | --- | --- |
 |6/1|Network Flow|---| --- | --- | --- | --- |
 |6/2|Network Flow|---| --- | --- | --- | --- |
