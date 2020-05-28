@@ -1,0 +1,252 @@
+\documentclass[11pt]{article}
+
+\newcommand{\yourname}{}
+\newcommand{\yourcollaborators}{}
+
+\def\comments{1}
+
+\newcommand{\course}{\href{tlarock.github.io/teaching/cs3000/syllabus.html}{CS 3000: Algorithms \& Data}}
+\newcommand{\instructor}{Tim LaRock}
+\newcommand{\semester}{Summer 1 '20}
+
+\newcommand{\hwnum}{4}
+\newcommand{\hwdue}{Tuesday June 2nd at 11:59pm Boston time via Gradescope}
+
+%format and packages
+
+\usepackage{graphicx}
+%\usepackage{algorithm, algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage[margin=1.1in]{geometry}
+
+\usepackage{listings}
+\lstset
+{
+	language=[LaTeX]TeX,
+	breaklines=true,
+	basicstyle=\tt\scriptsize,
+	keywordstyle=\color{blue},
+	identifierstyle=\color{magenta},
+}
+
+
+\usepackage{microtype}
+\usepackage{kpfonts}
+\usepackage{palatino}
+	\DeclareMathAlphabet{\mathtt}{OT1}{cmtt}{m}{n}
+	\SetMathAlphabet{\mathtt}{bold}{OT1}{cmtt}{bx}{n}
+	\DeclareMathAlphabet{\mathsf}{OT1}{cmss}{m}{n}
+	\SetMathAlphabet{\mathsf}{bold}{OT1}{cmss}{bx}{n}
+	\renewcommand*\ttdefault{cmtt}
+	\renewcommand*\sfdefault{cmss}
+	\renewcommand{\baselinestretch}{1.05}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkGreen}{rgb}{0.15,0.5,0.15}
+\definecolor{DarkRed}{rgb}{0.6,0.2,0.2}
+\definecolor{DarkBlue}{rgb}{0.2,0.2,0.6}
+\definecolor{DarkPurple}{rgb}{0.4,0.2,0.4}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+	linktocpage=true,
+	colorlinks=true,				% false: boxed links; true: colored links
+	linkcolor=DarkBlue,		% color of internal links
+	citecolor=DarkBlue,	% color of links to bibliography
+	urlcolor=DarkBlue,		% color of external links
+}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\definecolor{processblue}{cmyk}{0.96,0,0,0}
+\usetikzlibrary{matrix,arrows}
+
+\ifnum\comments=1
+\newcommand{\mynote}[2]{\marginpar{{\color{#1} \tiny #2}}}
+\newcommand{\mybignote}[2]{{\color{#1} $\langle \langle$ #2~$\rangle \rangle$}}
+\else
+\newcommand{\mynote}[2]{}
+\newcommand{\mybignote}[2]{}
+\fi
+\newcommand{\jnote}[1]{\mynote{red}{Jon: {#1}}}
+\newcommand{\bigjnote}[1]{\mybignote{red}{Jon: #1}}
+
+
+\usepackage[boxruled,vlined,nofillcomment]{algorithm2e}
+	\SetKwProg{Fn}{Function}{\string:}{}
+	\SetKwFor{While}{While}{}{}
+	\SetKwFor{For}{For}{}{}
+	\SetKwIF{If}{ElseIf}{Else}{If}{:}{ElseIf}{Else}{:}
+	\SetKw{Return}{Return}
+	
+
+%enclosure macros
+\newcommand{\paren}[1]{\ensuremath{\left( {#1} \right)}}
+\newcommand{\bracket}[1]{\ensuremath{\left\{ {#1} \right\}}}
+\renewcommand{\sb}[1]{\ensuremath{\left[ {#1} \right\]}}
+\newcommand{\ab}[1]{\ensuremath{\left\langle {#1} \right\rangle}}
+
+%probability macros
+\newcommand{\ex}[2]{{\ifx&#1& \mathbb{E} \else \underset{#1}{\mathbb{E}} \fi \left[#2\right]}}
+\newcommand{\pr}[2]{{\ifx&#1& \mathbb{P} \else \underset{#1}{\mathbb{P}} \fi \left[#2\right]}}
+\newcommand{\var}[2]{{\ifx&#1& \mathrm{Var} \else \underset{#1}{\mathrm{Var}} \fi \left[#2\right]}}
+
+\newcommand{\opt}{\textsc{opt}}
+
+%useful CS macros
+\newcommand{\poly}{\mathrm{poly}}
+\newcommand{\polylog}{\mathrm{polylog}}
+\newcommand{\zo}{\{0,1\}}
+\newcommand{\pmo}{\{\pm1\}}
+\newcommand{\getsr}{\gets_{\mbox{\tiny R}}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\negl}{\mathrm{negl}}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\eqand}{\qquad \textrm{and} \qquad}
+\newcommand{\ind}[1]{\mathbb{I}\{#1\}}
+\newcommand{\sslash}{\ensuremath{\mathbin{/\mkern-3mu/}}}
+
+%info theory macros
+\newcommand{\SD}{\mathit{SD}}
+\newcommand{\sd}[2]{\SD\left( #1 , #2 \right)}
+\newcommand{\KL}{\mathit{KL}}
+\newcommand{\kl}[2]{\KL\left(#1 \| #2 \right)}
+\newcommand{\CS}{\ensuremath{\chi^2}}
+\newcommand{\cs}[2]{\CS\left(#1 \| #2 \right)}
+\newcommand{\MI}{\mathit{I}}
+\newcommand{\mi}[2]{\MI\left(~#1~;~#2~\right)}
+
+%mathbb
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+%mathcal
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%theorem macros
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+	\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+
+\theoremstyle{theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{sol}{Solution}
+
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\newcommand{\solution}{\medskip\noindent{\color{DarkBlue}\textbf{Solution:}}}
+
+\begin{document}
+{\Large 
+\begin{center} \course\ --- \semester\ --- \instructor \end{center}}
+{\large
+\vspace{10pt}
+\noindent Homework~\hwnum \vspace{2pt}\\
+Due~\hwdue}
+
+\bigskip
+{\large
+\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+
+\vspace{15pt}
+\begin{itemize}
+	
+	\item Make sure to put your name on the first page.  If you are using the \LaTeX~template we provided, then you can make sure it appears by filling in the \texttt{yourname} command.
+	
+	\item This assignment is due~\hwdue.  Make sure to submit something before the deadline.
+	
+	\item Solutions must be typeset in \LaTeX.  If you need to draw any diagrams, you may draw them by hand as long as they are embedded in the PDF.  I recommend using the source file for this assignment to get started.
+	
+	\item I encourage you to work with your classmates on the homework problems. \emph{If you do collaborate, you must write all solutions by yourself, in your own words.}  Do not submit anything you cannot explain.  Please list all your collaborators in your solution for each problem by filling in the \texttt{yourcollaborators} command.
+	
+	\item Finding solutions to homework problems on the web, or by asking students not enrolled in the class, is strictly forbidden.
+	
+\end{itemize}
+
+\newpage
+\begin{prob}Floyd-Warshall in \LaTeX \end{prob}
+
+In class, we briefly discussed the Floyd-Warshall algorithm for finding shortest paths in weighted, directed graphs that do not have negative cycles. In this problem, you will use LaTeX to typeset the recursive definition and dynamic programming pseudocode for the Floyd-Warshall algorithm. You can find the relevant definition and pseudcode on the \href{https://en.wikipedia.org/wiki/Floyd\%E2\%80\%93Warshall\_algorithm}{the Wikipedia page}. You should also consider watching \href{https://www.youtube.com/watch?v=oNI0rf2P9gE}{this 15 minute video by Abdul Bari} explaining the algorithm.
+
+\begin{enumerate} [label=(\alph*)]
+	\item Starting from the template below, write a recursive definition for shortest paths using the \emph{cases} LaTeX environment. 
+	
+		\solution
+		
+			$$
+			X(m, n) = 
+			\begin{cases}
+			x(n), & \text{for } 0 \leq n \leq 1 \\
+			x(n - 1), & \text{for } 0 \leq n \leq 1 \\
+			x(n - 1), & \text{for } 0 \leq n \leq 1
+			\end{cases}
+			$$
+	
+	
+	\item Based on your reading of the Wikipedia page and/or the Abdul Bari video, write a few sentences informally explaining why the recursive definition solves the problem. You should at least define each of the functions and variables that appear in your definition. Going forward, you should do this every time you write a recursive definition, even if we do not explicitly ask you to do so, otherwise we have to guess what you meant! Note that in this class, a little bit too much explanation is almost always better than not enough.
+	
+	\solution		
+	
+	
+	\item Starting from the template below, write pseudocode for the dynamic programming algorithm to find shortest paths between all pairs of nodes in a weighted, directed graph using the \emph{algorithm} environment.
+	
+	\solution
+	
+	    \begin{algorithm}[H] % H means "here", as in put the algorithm right here in the text
+		\caption{MyAlgorithm $X[x_1, \ldots, x_n]$} % The caption shows up in the top of the box
+		$m \gets  \frac{n}{2}$  \\ % This is the first line. Double backslash creates a newline in LaTeX
+		\For{$k=0, \ldots, m$}{ % For loop definition. Notice there are two sets of {} - one for the condition, another to open the loop
+			\If{some condition}{ % If statement definition
+				do one thing (replace filler with the relevant LaTeX) \\
+				do a second thing, using $\Omega$
+			}
+			\ElseIf{other condition}{
+				do something else \\
+				then another thing with a fraction $\frac{y}{x}$
+			}
+			\Else{
+				do one last thing
+			}
+		}
+		
+		$m \gets 42$ \\
+		\Return the result % Return statement
+	\end{algorithm}
+
+
+
+\end{enumerate}
+\end{document}
