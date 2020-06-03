@@ -1,0 +1,331 @@
+\documentclass[11pt]{article}
+
+\newcommand{\yourname}{}
+\newcommand{\yourcollaborators}{}
+
+\def\comments{1}
+
+\newcommand{\course}{\href{tlarock.github.io/teaching/cs3000/syllabus.html}{CS 3000: Algorithms \& Data}}
+\newcommand{\instructor}{Tim LaRock}
+\newcommand{\semester}{Summer 1 '20}
+
+\newcommand{\hwnum}{5}
+\newcommand{\hwdue}{Tuesday June 9th at 11:59pm via Gradescope}
+
+%format and packages
+
+\usepackage{graphicx}
+%\usepackage{algorithm, algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage{kpfonts}
+\usepackage{palatino}
+\DeclareMathAlphabet{\mathtt}{OT1}{cmtt}{m}{n}
+\SetMathAlphabet{\mathtt}{bold}{OT1}{cmtt}{bx}{n}
+\DeclareMathAlphabet{\mathsf}{OT1}{cmss}{m}{n}
+\SetMathAlphabet{\mathsf}{bold}{OT1}{cmss}{bx}{n}
+\renewcommand*\ttdefault{cmtt}
+\renewcommand*\sfdefault{cmss}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkGreen}{rgb}{0.15,0.5,0.15}
+\definecolor{DarkRed}{rgb}{0.6,0.2,0.2}
+\definecolor{DarkBlue}{rgb}{0.2,0.2,0.6}
+\definecolor{DarkPurple}{rgb}{0.4,0.2,0.4}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+	linktocpage=true,
+	colorlinks=true,				% false: boxed links; true: colored links
+	linkcolor=DarkBlue,		% color of internal links
+	citecolor=DarkBlue,	% color of links to bibliography
+	urlcolor=DarkBlue,		% color of external links
+}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\definecolor{processblue}{cmyk}{0.96,0,0,0}
+\usetikzlibrary{matrix,arrows}
+
+\ifnum\comments=1
+\newcommand{\mynote}[2]{\marginpar{{\color{#1} \tiny #2}}}
+\newcommand{\mybignote}[2]{{\color{#1} $\langle \langle$ #2~$\rangle \rangle$}}
+\else
+\newcommand{\mynote}[2]{}
+\newcommand{\mybignote}[2]{}
+\fi
+\newcommand{\jnote}[1]{\mynote{red}{Jon: {#1}}}
+\newcommand{\bigjnote}[1]{\mybignote{red}{Jon: #1}}
+
+
+\usepackage[boxruled,vlined,nofillcomment]{algorithm2e}
+\SetKwProg{Fn}{Function}{\string:}{}
+\SetKwFor{While}{While}{}{}
+\SetKwFor{For}{For}{}{}
+\SetKwIF{If}{ElseIf}{Else}{If}{:}{ElseIf}{Else}{:}
+\SetKw{Return}{Return}
+
+
+%enclosure macros
+\newcommand{\paren}[1]{\ensuremath{\left( {#1} \right)}}
+\newcommand{\bracket}[1]{\ensuremath{\left\{ {#1} \right\}}}
+\renewcommand{\sb}[1]{\ensuremath{\left[ {#1} \right\]}}
+\newcommand{\ab}[1]{\ensuremath{\left\langle {#1} \right\rangle}}
+
+%probability macros
+\newcommand{\ex}[2]{{\ifx&#1& \mathbb{E} \else \underset{#1}{\mathbb{E}} \fi \left[#2\right]}}
+\newcommand{\pr}[2]{{\ifx&#1& \mathbb{P} \else \underset{#1}{\mathbb{P}} \fi \left[#2\right]}}
+\newcommand{\var}[2]{{\ifx&#1& \mathrm{Var} \else \underset{#1}{\mathrm{Var}} \fi \left[#2\right]}}
+
+\newcommand{\opt}{\textsc{opt}}
+
+%useful CS macros
+\newcommand{\poly}{\mathrm{poly}}
+\newcommand{\polylog}{\mathrm{polylog}}
+\newcommand{\zo}{\{0,1\}}
+\newcommand{\pmo}{\{\pm1\}}
+\newcommand{\getsr}{\gets_{\mbox{\tiny R}}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\negl}{\mathrm{negl}}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\eqand}{\qquad \textrm{and} \qquad}
+\newcommand{\ind}[1]{\mathbb{I}\{#1\}}
+\newcommand{\sslash}{\ensuremath{\mathbin{/\mkern-3mu/}}}
+
+%info theory macros
+\newcommand{\SD}{\mathit{SD}}
+\newcommand{\sd}[2]{\SD\left( #1 , #2 \right)}
+\newcommand{\KL}{\mathit{KL}}
+\newcommand{\kl}[2]{\KL\left(#1 \| #2 \right)}
+\newcommand{\CS}{\ensuremath{\chi^2}}
+\newcommand{\cs}[2]{\CS\left(#1 \| #2 \right)}
+\newcommand{\MI}{\mathit{I}}
+\newcommand{\mi}[2]{\MI\left(~#1~;~#2~\right)}
+
+%mathbb
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+%mathcal
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%theorem macros
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+
+\theoremstyle{theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{sol}{Solution}
+
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\newcommand{\solution}{\medskip\noindent{\color{DarkBlue}\textbf{Solution:}}}
+
+\begin{document}
+	{\Large 
+		\begin{center} \course\ --- \semester\ --- \instructor \end{center}}
+	{\large
+		\vspace{10pt}
+		\noindent Homework~\hwnum \vspace{2pt}\\
+		Due~\hwdue}
+	
+	\bigskip
+	{\large
+		\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+	
+	\vspace{15pt}
+	\begin{itemize}
+		
+		\item Make sure to put your name on the first page.  If you are using the \LaTeX~template we provided, then you can make sure it appears by filling in the \texttt{yourname} command.
+		
+		\item This assignment is due~\hwdue.  No late assignments will be accepted.  Make sure to submit something before the deadline.
+		
+		\item Solutions must be typeset in \LaTeX.  If you need to draw any diagrams, you may draw them by hand as long as they are embedded in the PDF.  I recommend using the source file for this assignment to get started.
+		
+		\item I encourage you to work with your classmates on the homework problems. \emph{If you do collaborate, you must write all solutions by yourself, in your own words.}  Do not submit anything you cannot explain.  Please list all your collaborators in your solution for each problem by filling in the \texttt{yourcollaborators} command.
+		
+		\item Finding solutions to homework problems on the web, or by asking students not enrolled in the class is strictly forbidden.
+		
+	\end{itemize}
+
+
+	\newpage
+		\begin{prob} Betweenness Centrality Practice\end{prob}
+
+In this question, you will compute the betweenness centrality of the nodes $u$ and $c$ in the graph below.
+
+\vspace{15pt}
+\begin{figure}[h!]
+	\begin{center}
+		\begin{tikzpicture}[node distance = 1.5 cm and 2.5cm,on grid, thick,state/.style ={circle,top color =white,bottom color = gray!20,draw,black,text=black,minimum width =.3 cm}]
+		\node[state] (0) at (-4, 3.5) {b};
+		\node[state] (1) at (-5, 2.5) {a};
+		\node[state] (2) at (-3, 2.5) {c};
+		\node[state] (3) at (-4, 1.5) {d};
+		\node[state] (4) at (-1, 2.5) {u};
+		\node[state] (5) at (1, 2.5) {e};
+		\node[state] (6) at (2, 3.5) {f};
+		\node[state] (8) at (2, 1.5) {g};
+		\tikzset{every node/.style={fill=white}} 
+		\draw (1) -- (2);
+		\draw (0) -- (2);
+		\draw (2) -- (3);
+		\draw (3) -- (1);
+		\draw (0) -- (3);
+		\draw (5) -- (8);
+		\draw (6) -- (5);
+		\draw (5) -- (4);
+		\draw (4) -- (2);
+		\end{tikzpicture}
+		
+	\end{center}
+\end{figure}
+
+\vspace{15pt}
+\begin{enumerate}[label=(\alph*)]
+	\item There are some pairs of nodes in this graph for which there is no possibility that the shortest path between them could include $u$. For example, the shortest path between nodes $a$ and $d$ is simply the edge between them. List all such pairs of nodes.
+	
+	\solution
+	\begin{itemize}
+		\item (a,d)
+		\item (..)
+	\end{itemize}
+	
+	\item List all of the shortest paths between the node $a$ and any node not included in the above list. If the shortest path contains $u$, use bold font for it, as in (v, w, \textbf{u}, x, y).
+	
+	\solution
+	\begin{itemize}
+		\item (v, y)
+		\begin{itemize}
+			\item (v, w, \textbf{u}, x, y)
+		\end{itemize}
+		
+		
+	\end{itemize}
+	
+	\item Compute the betweenness centrality of $u$ (reporting the number is enough, you do not need to show more work).
+	
+	\solution
+
+
+	\item Compute the betweenness centrality of $c$ (again, you do not need to show work if you do not want to, you can just compute and report the value).
+	
+	\solution
+	
+\end{enumerate}
+	
+	\vfill\newpage
+	
+	\begin{prob} MST Practice \end{prob}
+	
+	Compute an MST in the following graph.  You do not need to justify your answer.  {\bf Hint:} Type your solution neatly by copying the \LaTeX~for the MST and removing some edges.
+	
+	\vspace{15pt}
+	\begin{figure}[h!]
+		\begin{center}
+			\begin{tikzpicture}[node distance = 1.5 cm and 2.5cm,on grid, thick,state/.style ={circle,top color =white,bottom color = gray!20,draw,black,text=black,minimum width =.3 cm}]
+			\node[state] (a) {1};
+			\node[state] (b) [right =of a] {2};
+			\node[state] (c) [below =of a, xshift=-40pt, yshift=-15pt] {3};
+			\node[state] (d) [below =of b, xshift=+40pt, yshift=-15pt] {4};
+			\node[state] (e) [below =of c, xshift=+40pt, yshift=-15pt] {5};
+			\node[state] (f) [right =of e] {6};
+			\tikzset{every node/.style={fill=white}} 
+			\path 	(a) edge node {10} 	(b)
+			(a) edge node {7} 		(c)
+			(a) edge node {1}	 	(d)
+			(a) edge node {6}		(f);
+			\path 	(b) edge node {3}		(d)
+			(b) edge node {2}	 	(f);
+			\path 	(c) edge node {9}		(e)
+			(c) edge node {5}	 	(f);
+			\path 	(d) edge node {4} 		(f);
+			\path 	(e) edge node {8} 		(f);
+			\end{tikzpicture}
+		\end{center}
+	\end{figure}
+	
+	\vspace{15pt}
+	\solution
+	
+	\vfill\newpage
+	\begin{prob}Flow Practice\end{prob}
+	
+	Consider the following flow network $G = (V,E,\{c(e)\},s,t)$.
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\begin{tikzpicture}[> = stealth, node distance = 2.0 cm and 3.0 cm, on grid, thick, state/.style = {circle, top color =white, bottom color = gray!20, draw, black, text = black, minimum width = .3 cm}]
+			\node[state] (s) {s};
+			\node[state] (a) [above right =of s, yshift=15pt] {1};
+			\node[state] (b) [right =of s] {2};
+			\node[state] (c) [right =of b] {3};
+			\node[state] (d) [right =of c] {4};
+			\node[state] (e) [above =of d, yshift=15pt] {5};
+			\node[state] (f) [right =of d] {t};
+			\tikzset{every node/.style={fill=white}} 
+			\path[->] (s) 	edge node {10} (a)
+			edge node {8} (b);
+			\path[->] (a) 	edge node {4} (e)
+			edge node {7} (b);
+			\path[->] (b) 	edge node {6} (c)
+			edge node {8} (e);
+			\path[->] (c) 	edge node {4} (d);
+			\path[->] (d) 	edge node {12} (f);
+			\path[->] (e) 	edge node {9} (c)
+			edge node {7} (d)
+			edge node {2} (f);			
+			\end{tikzpicture}
+		\end{center}
+	\end{figure}
+	
+	\begin{enumerate}[label=(\alph*)]
+		
+		\item Compute a maximum s-t flow in this network and its value.  State the sequence of augmenting paths used to obtain the flow.  {\bf Hint:} Type your solution neatly by copying the \LaTeX~for the flow network and labeling edges with their flow values $f(e)$ (preferably even with $f(e) / c(e)$ to help you keep track of the capacity constraints.)
+		
+		
+		\solution
+		
+		\item Compute a minimum s-t cut in this network and its capacity.
+		
+		\solution
+		
+	\end{enumerate}
+	
+\end{document}

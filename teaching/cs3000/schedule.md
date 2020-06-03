@@ -25,6 +25,9 @@
 |5/26|Graph algorithms| HW3 ([tex](homework/hw3.tex), [pdf](homework/hw3.pdf))| --- | Erickson through Chapter 8.5 | [pdf](slides/Lecture12.pdf) | [pdf](slides/Lecture12_withNotes.pdf) |
 |5/27|Graph algorithms| --- | --- | Erickson through Chapter 8.5 | [pdf](slides/Lecture13.pdf) | [pdf](slides/Lecture13_withNotes.pdf) |
 |5/28|Graph algorithms| (sub)HW4 ([tex](homework/hw4.tex), [pdf](homework/hw4.pdf))  | --- | Erickson Chapter 7 and Chapter 10 through 10.3 | [pdf](slides/Lecture14.pdf) | [pdf](slides/Lecture14_withNotes.pdf) |
+|6/1|No Class|---| --- | --- | --- | --- |
+|6/2|Finish graph algorithms, start network flow|---|3 and 4| Erickson finish Chapter 10|---|---|
+|6/3|Network flow|HW5 ([tex](homework/hw5.tex), [pdf](homework/hw5.pdf))|---| Erickson finish Chapter 10|---|---|
 
 
 [//]: # (||5/27|Network Flow|---| --- | --- | --- | --- |
