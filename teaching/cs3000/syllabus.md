@@ -39,7 +39,6 @@ There are 9 TAs for the course. They are available as a resource for you as well
 | --- | --- |
 | Saurabha | jirgi.s@husky.neu.edu |
 | Ronn | jacob.r@husky.neu.edu | 
-| Himanshu | budhia.h@husky.neu.edu | 
 | Dania | abuhijleh.d@husky.neu.edu |
 | Drew | bodmer.d@husky.neu.edu |
 | Angela | gross.an@husky.neu.edu |
@@ -63,11 +62,11 @@ All times Boston time.
 | 9AM-10AM | Dania   |     ---       |    Dania        |   ---   |  ---   |
 | 10AM-11AM|  ---    |     ---       |   Saurabha      |   ---   |  ---   |
 | 11AM-12PM| ---     |     ---       |    ---          | Saurabha |  Samar |
-| 12PM-1PM | Himanshu|     ---       | Ronn, Angela    |   Ronn   |  ---   |
+| 12PM-1PM | ---     |     ---       | Ronn, Angela    |   Ronn   |  ---   |
 | 1PM-2PM  | ---     |     ---       |    ---          |   Drew   |  Tim   |
 | 2PM-3PM  | ---     |     ---       |    ---          |    ---   | Angela | 
 | 3PM-4PM  | Drew    |     ---       |    Samar        |    ---   |  ---   |
-| 4PM-5PM  | ---     | Tim, Himanshu |    ---          |    ---   |  ---   |
+| 4PM-5PM  | ---     |     Tim       |    ---          |    ---   |  ---   |
 | 6PM-7PM  | ---     |     ---       |    Kevin        |    Kevin |  ---   |
 | 7PM-8PM  | Luke    |               |    ---          |    ---   |  ---   |
 | 8PM-9PM  | ---     |     Luke      |    ---          |    ---   |  ---   |
