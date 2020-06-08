@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+
+\newcommand{\yourname}{}
+\newcommand{\yourcollaborators}{}
+
+\def\comments{1}
+
+\newcommand{\course}{\href{tlarock.github.io/teaching/cs3000/syllabus.html}{CS 3000: Algorithms \& Data}}
+\newcommand{\instructor}{Tim LaRock}
+\newcommand{\semester}{Summer 1 '20}
+
+\newcommand{\hwnum}{1}
+\newcommand{\hwdue}{Due Sunday, June 21st at 11:59pm via Gradescope}
+
+%format and packages
+
+\usepackage{graphicx}
+%\usepackage{algorithm, algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage{kpfonts}
+\usepackage{palatino}
+\DeclareMathAlphabet{\mathtt}{OT1}{cmtt}{m}{n}
+\SetMathAlphabet{\mathtt}{bold}{OT1}{cmtt}{bx}{n}
+\DeclareMathAlphabet{\mathsf}{OT1}{cmss}{m}{n}
+\SetMathAlphabet{\mathsf}{bold}{OT1}{cmss}{bx}{n}
+\renewcommand*\ttdefault{cmtt}
+\renewcommand*\sfdefault{cmss}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkGreen}{rgb}{0.15,0.5,0.15}
+\definecolor{DarkRed}{rgb}{0.6,0.2,0.2}
+\definecolor{DarkBlue}{rgb}{0.2,0.2,0.6}
+\definecolor{DarkPurple}{rgb}{0.4,0.2,0.4}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+	linktocpage=true,
+	colorlinks=true,				% false: boxed links; true: colored links
+	linkcolor=DarkBlue,		% color of internal links
+	citecolor=DarkBlue,	% color of links to bibliography
+	urlcolor=DarkBlue,		% color of external links
+}
+
+\theoremstyle{theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{sol}{Solution}
+
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\newcommand{\solution}{\medskip\noindent{\color{DarkBlue}\textbf{Solution:}}}
+
+\begin{document}
+	{\Large 
+		\begin{center} \course\ --- \semester\ --- \instructor \end{center}}
+	{\large
+		\vspace{10pt}
+		\noindent Extra Credit Assignment ~\hwnum \vspace{2pt}\\
+		\hwdue}
+	
+	\bigskip
+	{\large
+		\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+	
+	\vspace{1cm}
+	
+			In this course, we have focused exclusively on the mathematical aspects of algorithm design and analysis. These skills are fundamental to your education as a computer scientist, but designing and understanding algorithms is often more than an abstract exercise that starts and ends at cleverly optimizing running times. In many cases, the algorithms we design are intended to be used in production systems that interact with and make decisions for and about real people.
+	
+		In this extra credit assignment, you will be introduced to some of the ways in which algorithms can be used and misused in the real world. In recent years, much effort has been put in to systematically \emph{auditing} real algorithms to identify and rectify \emph{bias} in the outcomes of algorithmic decision making. This assignment will introduce you to algorithmic auditing and some of the forms of bias that auditing has brought to light.
+		
+		This assignment is unlike any other assignment in the course. You will not be asked to design or analyze any algorithms or do any math, but instead to understand and reflect on how already-existing algorithms that are used in the real world can be biased, based on research others have already done. You will be asked to watch some videos and read an article, then to reflect on what you learned in an open-ended way. There are no concrete right or wrong answers to these questions, so you should not look for any. The goal of the assignment is for you to spend some time thinking about the real world effects of algorithm design and implementation beyond computation itself.
+		
+		Up to 6 points earned on this assignment will be applied to your final exam score. You can do as much or little of the assignment as you wish and you will be awarded points accordingly. The response format is all open-ended; I do not have strict expectations about how much or little you need to write, I leave it up to you. In general, \emph{as long as you engage with the subject of the question}, you will get the points.
+		
+		The material in this assignment discusses racism, gender bias, and discrimination. If these topics are distressing for you to think about right now, but you still want an opportunity to earn extra credit on the final exam, please \href{mailto:timothylarock@gmail.com}{reach out to me directly} to discuss.
+		
+		\newpage
+		\begin{prob} Algorithmic Auditing (2 points) \end{prob}
+		
+			Watch or listen to \href{https://www.youtube.com/watch?v=gxsKVDyX2ak}{this 5 minute video} of Northeastern Computer Science faculty Christo Wilson briefly explaining the concept of Algorithmic Auditing and describing some of the research in his group, which you can also check out \href{https://personalization.ccs.neu.edu/}{on their website}. 
+			
+			After you watch the video, write a few sentences discussing a system that relies on algorithmic decision making that you regularly interact with and how you might approach auditing the system (it is okay to discuss one of the systems Prof. Wilson mentions in the video). From your perspective, how do you think the algorithmic decision making works? What kinds of data does the algorithm use? If you were to audit the system, what sources of bias might you seek to analyze?
+			
+			\solution
+			
+		\newpage 
+		\begin{prob} Bias in Facial Recognition Software (2 points) \end{prob}
+			Watch or listen to \href{https://www.youtube.com/watch?v=hwHnXdoSSFY}{this 30 minute interview} with MIT researcher \href{https://www.poetofcode.com/}{Joy Buolamwini},  who is also the founder of the \href{https://www.ajlunited.org/}{Algorithmic Justice League}. The interview discusses Buolamwini's work on auditing facial recognition algorithms. 
+			
+			In a few sentences, describe the work that Buolamwini's discusses in the interview, and reflect on ways that facial recognition (and similar algorithms) may further systemic problems of racial and gender bias.
+			
+			\solution
+		
+		\newpage
+		\begin{prob} Bias in Health Algorithms (2 points) \end{prob}
+			Read \href{https://www.dropbox.com/s/tx7vnpvwwz9ohig/421.full.pdf?dl=0}{Assessing risk, automating racism} by \href{https://www.ruhabenjamin.com/}{Dr. Ruha Benjamin}. The article is a commentary in response to an algorithmic audit of a healthcare system that found racial disparities in appropriating healthcare resources. The audit was conducted in \href{https://www.dropbox.com/s/x1j8nnvmxn4t94d/447.full.pdf?dl=0}{this paper}, which you may also want to skim, especially the introduction and conclusions.
+			
+			Describe in your own words how the disparity found in the algorithm was a result of its design. Given the argument and analysis by Dr. Benjamin, do you think using an automated system for identifying risk is justified in this case? In a few sentences, explain why or why not (it is also okay to discuss arguments both for and against an automated system).
+			
+			\solution 
+			
+
+
+\end{document}
