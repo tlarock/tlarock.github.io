@@ -29,6 +29,8 @@
 |6/2|Finish graph algorithms, start network flow|---|3 and 4| Erickson finish Chapter 10|[pptx](slides/Lecture15.pptx)|---|
 |6/3|Network flow|HW5 ([tex](homework/hw5.tex), [pdf](homework/hw5.pdf))|---| [Reduction](https://en.wikipedia.org/wiki/Reduction_(complexity))|[pdf](slides/Lecture16.pdf)|[pdf](slides/Lecture16_withNotes.pdf)|
 |6/3|Network flow|---|---| Erickson Chapter 4 through 4.4 |[pdf](slides/Lecture17.pdf)|[pdf](slides/Lecture17_withNotes.pdf)|
+|6/8|No Class|EC1 ([tex](homework/ec1.tex), [pdf](homework/ec1.pdf))|---| Erickson Chapter 4 through 4.4 | --- | --- |
+
 
 
 
