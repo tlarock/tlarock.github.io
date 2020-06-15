@@ -32,6 +32,7 @@
 |6/8|No Class|EC1 ([tex](homework/ec1.tex), [pdf](homework/ec1.pdf))|---| Erickson Chapter 4 through 4.4 | --- | --- |
 |6/9|Greedy Algorithms and Midterm 2 Review|---|HW5 (midnight)|---| [pdf](slides/Lecture18.pdf) | [pdf](slides/Lecture18_withNotes.pdf) |
 |6/10|No Class|---|---|---| --- | --- |
+|6/15|Greedy Algorithms|EC1 (forthcoming)|---|To Come| [pdf](slides/Lecture19.pdf) | [pdf](slides/Lecture19_withNotes.pdf) |
 
 
 
