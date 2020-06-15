@@ -1,0 +1,295 @@
+\documentclass[11pt]{article}
+
+\newcommand{\yourname}{}
+\newcommand{\yourcollaborators}{}
+
+\def\comments{1}
+
+\newcommand{\course}{\href{tlarock.github.io/teaching/cs3000/syllabus.html}{CS 3000: Algorithms \& Data}}
+\newcommand{\instructor}{Tim LaRock}
+\newcommand{\semester}{Summer 1 '20}
+
+
+\newcommand{\hwnum}{2}
+\newcommand{\hwdue}{Thursday June 18th 5PM via Gradescope}
+
+%format and packages
+
+\usepackage{graphicx}
+%\usepackage{algorithm, algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{microtype}
+\usepackage{kpfonts}
+\usepackage{palatino}
+\DeclareMathAlphabet{\mathtt}{OT1}{cmtt}{m}{n}
+\SetMathAlphabet{\mathtt}{bold}{OT1}{cmtt}{bx}{n}
+\DeclareMathAlphabet{\mathsf}{OT1}{cmss}{m}{n}
+\SetMathAlphabet{\mathsf}{bold}{OT1}{cmss}{bx}{n}
+\renewcommand*\ttdefault{cmtt}
+\renewcommand*\sfdefault{cmss}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkGreen}{rgb}{0.15,0.5,0.15}
+\definecolor{DarkRed}{rgb}{0.6,0.2,0.2}
+\definecolor{DarkBlue}{rgb}{0.2,0.2,0.6}
+\definecolor{DarkPurple}{rgb}{0.4,0.2,0.4}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+	linktocpage=true,
+	colorlinks=true,				% false: boxed links; true: colored links
+	linkcolor=DarkBlue,		% color of internal links
+	citecolor=DarkBlue,	% color of links to bibliography
+	urlcolor=DarkBlue,		% color of external links
+}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\definecolor{processblue}{cmyk}{0.96,0,0,0}
+\usetikzlibrary{matrix,arrows}
+
+\ifnum\comments=1
+\newcommand{\mynote}[2]{\marginpar{{\color{#1} \tiny #2}}}
+\newcommand{\mybignote}[2]{{\color{#1} $\langle \langle$ #2~$\rangle \rangle$}}
+\else
+\newcommand{\mynote}[2]{}
+\newcommand{\mybignote}[2]{}
+\fi
+\newcommand{\jnote}[1]{\mynote{red}{Jon: {#1}}}
+\newcommand{\bigjnote}[1]{\mybignote{red}{Jon: #1}}
+
+
+\usepackage[boxruled,vlined,nofillcomment]{algorithm2e}
+\SetKwProg{Fn}{Function}{\string:}{}
+\SetKwFor{While}{While}{}{}
+\SetKwFor{For}{For}{}{}
+\SetKwIF{If}{ElseIf}{Else}{If}{:}{ElseIf}{Else}{:}
+\SetKw{Return}{Return}
+
+
+%enclosure macros
+\newcommand{\paren}[1]{\ensuremath{\left( {#1} \right)}}
+\newcommand{\bracket}[1]{\ensuremath{\left\{ {#1} \right\}}}
+\renewcommand{\sb}[1]{\ensuremath{\left[ {#1} \right\]}}
+\newcommand{\ab}[1]{\ensuremath{\left\langle {#1} \right\rangle}}
+
+%probability macros
+\newcommand{\ex}[2]{{\ifx&#1& \mathbb{E} \else \underset{#1}{\mathbb{E}} \fi \left[#2\right]}}
+\newcommand{\pr}[2]{{\ifx&#1& \mathbb{P} \else \underset{#1}{\mathbb{P}} \fi \left[#2\right]}}
+\newcommand{\var}[2]{{\ifx&#1& \mathrm{Var} \else \underset{#1}{\mathrm{Var}} \fi \left[#2\right]}}
+
+\newcommand{\opt}{\textsc{opt}}
+
+%useful CS macros
+\newcommand{\poly}{\mathrm{poly}}
+\newcommand{\polylog}{\mathrm{polylog}}
+\newcommand{\zo}{\{0,1\}}
+\newcommand{\pmo}{\{\pm1\}}
+\newcommand{\getsr}{\gets_{\mbox{\tiny R}}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\negl}{\mathrm{negl}}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\eqand}{\qquad \textrm{and} \qquad}
+\newcommand{\ind}[1]{\mathbb{I}\{#1\}}
+\newcommand{\sslash}{\ensuremath{\mathbin{/\mkern-3mu/}}}
+
+%info theory macros
+\newcommand{\SD}{\mathit{SD}}
+\newcommand{\sd}[2]{\SD\left( #1 , #2 \right)}
+\newcommand{\KL}{\mathit{KL}}
+\newcommand{\kl}[2]{\KL\left(#1 \| #2 \right)}
+\newcommand{\CS}{\ensuremath{\chi^2}}
+\newcommand{\cs}[2]{\CS\left(#1 \| #2 \right)}
+\newcommand{\MI}{\mathit{I}}
+\newcommand{\mi}[2]{\MI\left(~#1~;~#2~\right)}
+
+%mathbb
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+%mathcal
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%theorem macros
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+
+\theoremstyle{theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{sol}{Solution}
+
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\newcommand{\solution}{\medskip\noindent{\color{DarkBlue}\textbf{Solution:}}}
+
+\begin{document}
+	{\Large 
+		\begin{center} \course\ --- \semester\ --- \instructor \end{center}}
+	{\large
+		\vspace{10pt}
+		\noindent Extra Credit Assignment ~\hwnum \vspace{2pt}\\
+		Due~\hwdue}
+	
+	\bigskip
+	{\large
+		\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+	
+	\vspace{15pt}
+	\begin{itemize}
+		
+		\item This is an extra credit assignment. Up to 10 points earned on this assignment will be added to your lowest homework grade (after dropping your lowest-lowest grade).
+		
+		\item Make sure to put your name on the first page.  If you are using the \LaTeX~template we provided, then you can make sure it appears by filling in the \texttt{yourname} command.
+		
+		\item This assignment is due~\hwdue.  Make sure to submit something before the deadline.
+		
+		\item Solutions must be typeset in \LaTeX.  If you need to draw any diagrams, you may draw them by hand as long as they are embedded in the PDF.  I recommend using the source file for this assignment to get started.
+		
+		\item I encourage you to work with your classmates on the homework problems. \emph{If you do collaborate, you must write all solutions by yourself, in your own words.}  Do not submit anything you cannot explain.  Please list all your collaborators in your solution for each problem by filling in the \texttt{yourcollaborators} command.
+		
+		\item Finding solutions to homework problems on the web, or by asking students not enrolled in the class, is strictly forbidden.
+		
+	\end{itemize}
+	
+	
+	\newpage	
+	\begin{prob} Greedy Algorithms\end{prob}
+	
+	You are running a convention on a shoestring budget, and need to staff the registration desk.  The convention runs for the interval $[s,t]$.  There are $n$ potential staff, each of which is able to cover an interval $[s_i,t_i]$.  You need to select a set of volunteers $S \subseteq \{1,\dots,n\}$ to \emph{cover} the entire convention, meaning that the union of all of their intervals covers the entire interval, i.e. $\bigcup_{i \in S} [s_i,t_i] \supseteq [s,t]$.  Equivalently, for every time $z \in [s,t]$, there is some volunteer $i \in S$ such that $z \in [s_i, t_i]$.  However, each staffer will be paid for their services out of very limited funds, so you need to ensure $|S|$ is as small as possible.
+	
+	In this problem you will design an efficient greedy algorithm that takes as input the numbers $s,t,s_1,t_1,\dots,s_n,t_n$ and outputs a set $S$ that covers the convention and uses the minimum number of staffers.  The running time of your algorithm should be at most $O(n^2)$, but a solution exists that runs in $O(n \log n)$ time.
+	
+	\bigskip
+	The following is an example input with $9$ volunteers.  One optimal solution is $S = \{ 1,3,9 \}$.
+	
+	\begin{center}
+		\includegraphics[width=5in]{hw8-fig1.jpg}
+	\end{center}
+	
+	\begin{enumerate}[label=(\alph*)]
+		
+		\item {\em (1 point)} In a few sentences, explain how your algorithm will work.
+		
+		\solution 
+		
+		\item  {\em (1 point)} Describe your algorithm in pseudocode.
+		
+		\solution 
+		
+		
+		\item  {\em (1 point)} Analyze the running time of your algorithm.
+		
+		\solution
+
+		
+		\item  {\em (2 points)} Prove that your algorithm finds a set of staffers $S$ of minimum size to cover the convention. Note: A greedy-stays-ahead proof will probably be easier.
+		
+		\solution
+
+		
+	\end{enumerate}
+	
+	\newpage	
+	\begin{prob} Huffman Codes\end{prob}
+	You are given the symbol alphabet $\Sigma=\{a,b,c,d,e,f,g\}$ and the following frequencies $f_i$ for each symbol $i\in\Sigma$.
+	
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|l|l|l|l|l|l|l|l|}
+			\hline
+			Symbol & a & b & c & d & e & f & g \\ \hline
+			Frequency & 0.25 & 0.22 & 0.16 & 0.14 & 0.13 & 0.07 & 0.03 \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	
+	\begin{enumerate}[label=(\alph*)]
+		\item  {\em (2 points)} Use Huffman's Algorithm to create a prefix-free binary code from the given alphabet and frequencies. You do not need to show your work, but you should format your binary tree in \LaTeX\ starting from the template below. Note that the data in the template are only for illustrative purposes and have nothing to do with the actual solution.
+		
+		\solution
+		
+		
+		\begin{tikzpicture}[level distance=1.5cm,
+		level 1/.style={sibling distance=3cm},
+		level 2/.style={sibling distance=1.5cm}]
+		
+		\node {1}
+		child {
+			node {0.5}
+			child {node {0.2}
+				child {node {y}}
+				child {node{d}}
+			}
+			child {node {p}}
+		}
+		child {
+			node {0.5}
+				child {
+					node {0.25}
+					child {node {c}
+				}
+				child {node {m}}
+			}
+			child {node {i}}
+		}
+		;
+		\end{tikzpicture}
+		
+		\item  {\em (1 point)} Encode the string $aced$
+		
+		\solution
+		
+
+		
+		\item  {\em (1 point)} Decode the following encoded string: $0100100010001001100$
+		
+		\solution
+		
+
+		
+		\item  {\em (1 point)} Compute the \emph{entropy} $H=\sum_{i\in \Sigma}f_i \cdot \log_2(f_i)$ of the code. Note that entropy is a negative quantity. 
+		
+		\solution
+
+
+	\end{enumerate}
+	
+	
+\end{document}
