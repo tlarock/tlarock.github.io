@@ -33,6 +33,7 @@
 |6/9|Greedy Algorithms and Midterm 2 Review|---|HW5 (midnight)|---| [pdf](slides/Lecture18.pdf) | [pdf](slides/Lecture18_withNotes.pdf) |
 |6/10|No Class|---|---|---| --- | --- |
 |6/15|Greedy Algorithms|EC2 ([tex](homework/ec2.tex), [pdf](homework/ec2.pdf))|---|[Tardos and Kleinberg Chapter 4.7 (pg 158)](http://www.cs.sjtu.edu.cn/~jiangli/teaching/CS222/files/materials/Algorithm%20Design.pdf); [Greedy Proofs Handout](https://web.stanford.edu/class/archive/cs/cs161/cs161.1138/handouts/120%20Guide%20to%20Greedy%20Algorithms.pdf) | [pdf](slides/Lecture19.pdf) | [pdf](slides/Lecture19_withNotes.pdf) |
+|6/16|Clustering|---|---|Erickson Chapter 12 (as much as desired)|[pdf](slides/Lecture20.pdf)|[pdf](slides/Lecture20_withNotes.pdf)|
 
 
 
