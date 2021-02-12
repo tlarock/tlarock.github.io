@@ -1,0 +1,3 @@
+markdown/intro.md
+markdown/clips.md
+markdown/contact.md
