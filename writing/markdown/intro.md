@@ -2,7 +2,7 @@
 title: <center>Tim LaRock</center>
 ...
 
-<center> [Science](../index.html) | [CV](../img/LaRock_Tim_CV.pdf) | [Contact](#contact) | [Writing](writing.html)</center>
+<center> [Science](../index.html) | [CV](../img/LaRock_Tim_CV.pdf) | [Contact](#contact)</center>
 
 ----
 
