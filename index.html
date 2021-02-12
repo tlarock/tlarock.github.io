@@ -22,35 +22,49 @@
 </header>
 <p><a href="#research">Research</a> | <a href="#projects">Projects</a> | <a href="img/LaRock_Tim_CV.pdf">CV</a> | <a href="#bio">Bio</a> | <a href="#contact">Contact</a> | <a href="#teaching">Teaching</a></p>
 <hr />
-<p><a href="https://www.networkscienceinstitute.org/people/timothy-larock"><img src="https://uploads-ssl.webflow.com/58920a954e6c16dd742902c7/5bc78f7efaca718cb09689bf_timothy-crop.png" height=500 width=500></a></p>
+<center>
+<a href="https://www.networkscienceinstitute.org/people/timothy-larock"><img src="https://uploads-ssl.webflow.com/58920a954e6c16dd742902c7/5bc78f7efaca718cb09689bf_timothy-crop.png" height=500 width=500></a>
+</center>
 <p>PhD Candidate at the <a href="https://www.networkscienceinstitute.org">Network Science Institute</a> at Northeastern University</p>
+<hr />
+<h2 id="bio"><a name="bio"></a> Bio</h2>
+<p>I am a fifth year doctoral candidate in Network Science at Northeastern University’s Network Science Institute, advised by <a href="www.eliassi.org">Dr. Tina Eliassi-Rad</a>. Prior to joining the Institute in 2016, I completed a BS in Computer Science and Applied Mathematics with a minor in Philosophy at the State University of New York at Albany, where I conducted research on load balancing in cellular networks and unsupervised transmitter detection in wireless frequency spectrum data, under the supervision of Prof. Petko Bogdanov and Prof. Mariya Zheleva. You can find a copy of my CV <a href="img/LaRock_Tim_CV.pdf">here</a> and my Google Scholar page <a href="https://scholar.google.com/citations?user=kAaxRkUAAAAJ&amp;hl=en">here</a>.</p>
 <hr />
 <h2 id="research"><a name="research"></a> Research</h2>
 <p>My research falls at the intersection of network science, data mining and machine learning. In particular, my research seeks to identify and understand sequential patterns and dependencies in network data, such as passenger movement through public transit systems, goods through logistics networks, or users navigating the Web. I am also interested in using machine learning to improve partially observed (sampled) network data, as well as the limitations of machine learning in solving network problems.</p>
 <p>The best way to find my publications is through my <a href="https://scholar.google.com/citations?user=kAaxRkUAAAAJ&amp;hl=en">Google Scholar page</a>.</p>
 <hr />
-<h2 id="teaching"><a name="teaching"></a> Teaching</h2>
-<p>
-<a href="teaching/cs3000/syllabus.html">CS 3000 - Summer 1</a>
-</p>
-<hr />
 <h2 id="projects"><a name="projects"></a> Projects</h2>
 <h6 id="understanding-higher-order-correlations-in-pathway-data">Understanding Higher Order Correlations in Pathway Data</h6>
 <p>Data representing pathways or sequences of nodes traversed in a network, such as people moving through a public transit system or navigating hyperlinks on the Web, is commonly studied in Network Science. Traditionally, network scientists studied such data by aggregating it into weighted networks, destroying sequential or temporal correlations in the process. More recently, researchers have begun to dig in to these temporal correlations to understand mechanisms of pathway generation and how this generation impacts network structure. I am interested in studying “higher order networks” (specifically De Bruijn graph representations) to better understand pathway data on its own terms. I am also interested in connecting the sequential pattern mining literatures, developed in large part by the computer science/data mining community, with perspectives and approaches developed more recently by network scientists.</p>
 <ul>
-<li><a href="https://arxiv.org/abs/1905.10580">PrePrint</a>: HYPA: Efficient Detection of Path Anomalies in Time Series Data on Networks (Accepted to SIAM Data Mining 2020)</li>
+<li><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976236.52">Paper</a>: HYPA: Efficient Detection of Path Anomalies in Time Series Data on Networks (SIAM Data Mining ’20)
+<ul>
+<li><a href="https://arxiv.org/abs/1905.10580">arXiv preprint including Appendix</a></li>
+</ul></li>
 <li><a href="img/NetSci_HONS_2019.pdf">Slides</a>: Detecting Path Anomalies in Sequential Data on Networks (<a href="https://uzhdag.github.io/hons_web/">HONS Satellite</a> @ <a href="http://netsci2019.net/">NetSci 2019</a>)</li>
 <li><a href="img/NetSci_conf_2019.pdf">Slides</a>: Detecting Path Anomalies in Sequential Data on Networks (<a href="http://netsci2019.net/">NetSci 2019 Conference Talk</a>)</li>
 </ul>
 <h6 id="resampling-partially-observed-network-data">Resampling Partially Observed Network Data</h6>
 <p>In network science, we often deal with partially observed data, such as sampled interactions on social media gathered from Twitter. In many circumstances, we have some resource limited ability to resample the data, for example by accessing an API. In our work, we develop methods for the following scenario: You are given a sample of a larger network, the ability to query nodes in the sample to learn more accurate information about them (such as their true neighborhood or attribute labels), and a function that provides a mathematical reward given the outcome of a query. The goal of our methods is to learn to predict which nodes one should query to maximize reward in their sample.</p>
 <ul>
-<li><a href="https://arxiv.org/abs/2001.07607">PrePrint</a>: Understanding the Limitations of Network Online Learning (Under journal review)</li>
+<li><a href="https://appliednetsci.springeropen.com/articles/10.1007/s41109-020-00296-w">Paper</a>: Understanding the Limitations of Network Online Learning (Applied Network Science, 2020)
+<ul>
+<li><a href="https://arxiv.org/abs/2001.07607">arXiv preprint</a></li>
+</ul></li>
 <li><a href="http://www.mlgworkshop.org/2018/papers/MLG2018_paper_40.pdf">Workshop Paper</a>: Reducing Network Incompleteness Through Online Learning: A Feasibility Study</li>
 </ul>
+<h6 id="human-mobility-and-physical-distancing-during-the-covid-19-pandemic">Human Mobility and Physical Distancing during the COVID-19 Pandemic</h6>
+<p>Collective physical distancing has been one of the most important tools used to slow the spread of COVID-19. In a collaboration with the MOBS Lab at Northeastern (among many others), we analyzed mobility in the United States via large-scale anonymized cell phone GPS data.</p>
+<ul>
+<li><a href="https://covid19.gleamproject.org/mobility">Dashboard</a>: Interactive dashboard showing trends in measures of collective physical distancing behavior in the U.S.</li>
+<li><a href="https://www.mobs-lab.org/uploads/6/7/8/7/6787877/covid19mobility_report2.pdf">Report</a>: Reshaping a nation: Mobility, commuting, and contact patterns during the COVID-19 outbreak (2020)</li>
+</ul>
 <hr />
-<h2 id="bio"><a name="bio"></a> Bio</h2>
-<p>I am a fourth year doctoral candidate in Network Science at Northeastern University’s Network Science Institute, advised by <a href="www.eliassi.org">Dr. Tina Eliassi-Rad</a>. Prior to joining the Institute in 2016, I completed a BS in Computer Science and Applied Mathematics with a minor in Philosophy at the State University of New York at Albany, where I conducted research on load balancing in cellular networks and unsupervised transmitter detection in wireless frequency spectrum data, under the supervision of Prof. Petko Bogdanov and Prof. Mariya Zheleva. You can find a copy of my CV <a href="img/LaRock_Tim_CV.pdf">here</a> and my Google Scholar page <a href="https://scholar.google.com/citations?user=kAaxRkUAAAAJ&amp;hl=en">here</a>.</p>
+<h2 id="teaching"><a name="teaching"></a> Teaching</h2>
+<p>
+<a href="teaching/cs3000/syllabus.html">CS 3000 - Summer 1</a>
+</p>
 <hr />
 <h2 id="contact"><a name="contact"></a> Contact</h2>
 <p>Northeastern Email: larock.t at northeastern dot edu</p>

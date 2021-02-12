@@ -1,6 +1,6 @@
 markdown/intro.md
-markdown/research.md
-markdown/teaching.md
-markdown/projects.md
 markdown/bio.md
+markdown/research.md
+markdown/projects.md
+markdown/teaching.md
 markdown/contact.md
