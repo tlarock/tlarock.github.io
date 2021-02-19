@@ -164,3 +164,8 @@ label, legend, fieldset {
   margin-bottom: .5rem;
   font-weight: 600; }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
