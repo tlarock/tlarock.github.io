@@ -1,6 +1,7 @@
 
 ## <a name="clips"></a>  Clips
 
+####### April 2021. "The PRO Act Could Be a Game Changer for Academic Labor Organizing." [Jacobin Magazine](https://jacobinmag.com/2021/04/pro-act-unions-academic-workers-universities/).
 
 ####### March 2021. "Racism in, Racism Out: AI Reproduces Healthcare Inequity." [Science for the People](https://magazine.scienceforthepeople.org/web-extras/covid-19-artificial-intelligence-healthcare-system-racial-inequity/).
 
