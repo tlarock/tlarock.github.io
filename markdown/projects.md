@@ -7,6 +7,7 @@ Data representing pathways or sequences of nodes traversed in a network, such as
 
 * [Paper](https://epubs.siam.org/doi/abs/10.1137/1.9781611976236.52): HYPA: Efficient Detection of Path Anomalies in Time Series Data on Networks (SIAM Data Mining '20)
 	* [arXiv preprint including Appendix](https://arxiv.org/abs/1905.10580)
+	* [SIAM Data Mining 2020 Talk](https://www.dropbox.com/s/3nmwqfua2tojn0e/LaRock_HYPA_SDM21.mp4?dl=0)
 * [Slides](img/NetSci_HONS_2019.pdf): Detecting Path Anomalies in Sequential Data on Networks ([HONS Satellite](https://uzhdag.github.io/hons_web/) @ [NetSci 2019](http://netsci2019.net/))
 * [Slides](img/NetSci_conf_2019.pdf): Detecting Path Anomalies in Sequential Data on Networks ([NetSci 2019 Conference Talk](http://netsci2019.net/))
 
