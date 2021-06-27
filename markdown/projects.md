@@ -11,6 +11,12 @@ Data representing pathways or sequences of nodes traversed in a network, such as
 * [Slides](img/NetSci_conf_2019.pdf): Detecting Path Anomalies in Sequential Data on Networks ([NetSci 2019 Conference Talk](http://netsci2019.net/))
 
 
+###### Sequential Motifs from Pathway Data
+We use DeBruijn graphs to extend the concept of motifs as building blocks of complex networks to pathway data, studying _sequential motifs_. We use the fact that a weighted edge in a _kth_ order DeBruijn graph represents the frequency of a length _k_ path through a network, and that these edges can be mapped into a common motif space. We show that analyzing motifs based on pathway data using traditional static-network techniques can be misleading if the static structure encodes patterns that are possible based on the structure alone, but do not actually appear in the pathway data. Beyond counting, we can also compare the overall frequency of motif structures with their frequency after applying HYPA, a null model for DeBruijn graphs that identifies paths observed significantly more or less often than expected. This analysis provides insight into the mesoscale navigation patterns that drive microscale interactions between nodes.
+
+* [NetSci 2020 Conference Talk](https://www.dropbox.com/s/8bcx75d37l87shu/netsci_2020_larock_final.mov?dl=0): Frequency of Significant Sequential Motifs Reveal Patterns in Pathway Data 
+
+
 ###### Resampling Partially Observed Network Data
 In network science, we often deal with partially observed data, such as sampled interactions on social media gathered from Twitter. In many circumstances, we have some resource limited ability to resample the data, for example by accessing an API. In our work, we develop methods for the following scenario: You are given a sample of a larger network, the ability to query nodes in the sample to learn more accurate information about them (such as their true neighborhood or attribute labels), and a function that provides a mathematical reward given the outcome of a query. The goal of our methods is to learn to predict which nodes one should query to maximize reward in their sample.
 
