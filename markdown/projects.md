@@ -18,7 +18,7 @@ We use DeBruijn graphs to extend the concept of motifs as building blocks of com
 * [NetSci 2020 Conference Talk](https://www.dropbox.com/s/8bcx75d37l87shu/netsci_2020_larock_final.mov?dl=0): Frequency of Significant Sequential Motifs Reveal Patterns in Pathway Data 
 
 ###### Higher-order Analysis of Global Shipping Network Data
-Preliminary work studying a dataset of global shipping routes, building on previous work using a _path-centric_ approach that takes advantage of sequential information in the shipping routes. In place of the shortest paths that were central to previous work, we focus on _minimum-route_ paths, or paths that use the minimum number of transfers between shipping routes. We find that previous work overestimated the role of nodes and edges through the "structural core" of the network.
+Preliminary work studying a dataset of global shipping routes. We build on previous work studying shipping route data, contributing a _path-centric_ approach that takes advantage of sequential information in the shipping routes. In place of the shortest paths that were central to previous work, we focus on _minimum-route_ paths, or paths that use the minimum number of transfers between shipping routes. We find that previous work overestimated the role of nodes and edges through the "structural core" of the network as defined by that work.
 
 * [Networks 2021 Conference Talk](https://www.dropbox.com/s/5saq5294gog9lkj/10217_LaRock.mp4?dl=0): Analyzing Shipping Route Data Using Higher-order Network Analysis
 
