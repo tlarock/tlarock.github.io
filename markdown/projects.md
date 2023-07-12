@@ -1,6 +1,11 @@
 
 ## <a name="projects"></a>  Projects
 
+###### Encapsulation Structure and Campfire Dynamics in Hypergraphs
+We explore the properties of real-world hypergraphs, focusing on the encapsulation of their hyperedges, which is the extent that smaller hyperedges are subsets of larger hyperedges. Building on the concept of line graphs, our measures quantify the relations existing between hyperedges of different sizes and, as a byproduct, the compatibility of the data with a simplicial complex representation -- whose encapsulation would be maximum. We then turn to the impact of the observed structural patterns on diffusive dynamics, focusing on a variant of threshold models, called encapsulation dynamics, and demonstrate that non-random patterns can accelerate the spreading in the system. 
+
+* [arXiv preprint](https://arxiv.org/abs/2307.04613): Encapsulation Structure and Dynamics in Hypergraphs
+* [Slides](img/9A_LaRock.pdf): Starting a Fire with Twigs: Influence of Encapsulation Relations on Bottom-up Dynamics on Hypergraphs (NetSci 2023)
 
 ###### Understanding Higher Order Correlations in Pathway Data
 Data representing pathways or sequences of nodes traversed in a network, such as people moving through a public transit system or navigating hyperlinks on the Web, is commonly studied in Network Science. Traditionally, network scientists studied such data by aggregating it into weighted networks, destroying sequential or temporal correlations in the process. More recently, researchers have begun to dig in to these temporal correlations to understand mechanisms of pathway generation and how this generation impacts network structure. I am interested in studying "higher order networks" (specifically De Bruijn graph representations) to better understand pathway data on its own terms. I am also interested in connecting the sequential pattern mining literatures, developed in large part by the computer science/data mining community, with perspectives and approaches developed more recently by network scientists.
