@@ -4,7 +4,8 @@
 ###### Encapsulation Structure and Campfire Dynamics in Hypergraphs
 We explore the properties of real-world hypergraphs, focusing on the encapsulation of their hyperedges, which is the extent that smaller hyperedges are subsets of larger hyperedges. Building on the concept of line graphs, our measures quantify the relations existing between hyperedges of different sizes and, as a byproduct, the compatibility of the data with a simplicial complex representation -- whose encapsulation would be maximum. We then turn to the impact of the observed structural patterns on diffusive dynamics, focusing on a variant of threshold models, called encapsulation dynamics, and demonstrate that non-random patterns can accelerate the spreading in the system. 
 
-* [arXiv preprint](https://arxiv.org/abs/2307.04613): Encapsulation Structure and Dynamics in Hypergraphs
+* [Paper](https://iopscience.iop.org/article/10.1088/2632-072X/ad0b39): Encapsulation Structure and Dynamics in Hypergraphs
+    * [arXiv preprint](https://arxiv.org/abs/2307.04613): Encapsulation Structure and Dynamics in Hypergraphs
 * [Slides](img/9A_LaRock.pdf): Starting a Fire with Twigs: Influence of Encapsulation Relations on Bottom-up Dynamics on Hypergraphs (NetSci 2023)
 
 ###### Understanding Higher Order Correlations in Pathway Data
