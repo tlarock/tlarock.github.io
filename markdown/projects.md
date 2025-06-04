@@ -1,6 +1,11 @@
 
 ## <a name="projects"></a>  Projects
 
+###### Non-uniqueness of Node Co-occurrence Matrices of Hypergraphs
+Hypergraphs extend traditional networks by capturing multi-way or group interactions. Given the complexity of hypergraph data and the wide range of methodology available for pairwise network analysis, hypergraph data is often projected onto a weighted and undirected network. The simplest of these projections, often referred to as a node co-occurrence matrix, is known to be non-unique, as distinct non-isomorphic hypergraphs can produce the same weighted adjacency matrix. This non-uniqueness raises important questions about the structural information lost during the projection and how to efficiently quantify the complexity of the original hypergraph. Here we develop a search algorithm to identify all hypergraphs corresponding to a given projection, analyze its runtime, and explore its parallelisability. Applying this algorithm to projections derived from a random hypergraph model, we characterize conditions under which projections are non-unique. Our findings provide a new framework and set of computational tools to investigate projections of hypergraphs. 
+
+* [arXiv preprint](https://arxiv.org/abs/2506.01479): Exploring the Non-uniqueness of Node Co-occurence Matrices of Hypergraphs
+
 ###### Encapsulation Structure and Campfire Dynamics in Hypergraphs
 We explore the properties of real-world hypergraphs, focusing on the encapsulation of their hyperedges, which is the extent that smaller hyperedges are subsets of larger hyperedges. Building on the concept of line graphs, our measures quantify the relations existing between hyperedges of different sizes and, as a byproduct, the compatibility of the data with a simplicial complex representation -- whose encapsulation would be maximum. We then turn to the impact of the observed structural patterns on diffusive dynamics, focusing on a variant of threshold models, called encapsulation dynamics, and demonstrate that non-random patterns can accelerate the spreading in the system. 
 
