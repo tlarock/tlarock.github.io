@@ -1,5 +1,7 @@
 
 ## <a name="clips"></a>  Clips
+####### March 2026. "On Nostalgia." [andAlso: a literary & art magazine](https://andalsomagazine.com/articles/04-on_nostalgia.html).
+
 ####### August 2021. "The Politics of Scientific Consensus." [Science for the People](https://magazine.scienceforthepeople.org/web-extras/public-health-lockdown-covid-19-great-barrington-declaration/).
 
 ####### April 2021. "The PRO Act Could Be a Game Changer for Academic Labor Organizing." [Jacobin Magazine](https://jacobinmag.com/2021/04/pro-act-unions-academic-workers-universities/).
