@@ -6,6 +6,8 @@ The detailed study of individual human mobility requires large-scale high-resolu
 
 * [arXiv preprint](https://arxiv.org/abs/2606.00733): Higher-order analysis of human mobility data (2026)
 
+* [HONS '26 Slides](img/hons-2026-slides.pdf)
+
 
 ###### Robustness of Complex Infrastructure Networks
 A wide variety of infrastructure systems can be modeled as complex networks, from power grids to public transportation to water distribution. Infrastructure systems are uniquely susceptible and sensitive to the kinds of disruptions modeled using network robustness techniques as vital conduits for commodities, goods, and people. In this line of research, we investigate the robustness of complex infrastructure systems through the lens of path-based higher-order network science. The advantage of this higher-order lens is that it integrates both topology and dynamics into a single representaiton. I have multiple lines of ongoing research in this area, including work on understanding network susceptibility, network resillience and repair, as well as models and metrics for evaluating robustness of networks in the specific context of spatially embedded infrastructure systems.
