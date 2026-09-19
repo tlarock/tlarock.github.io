@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body>
+{% include nav.html %}
+<main class="wrap page">
+  {% if page.title and layout.hide_title != true %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+  {{ content }}
+</main>
+{% include footer.html %}
+</body>
+</html>

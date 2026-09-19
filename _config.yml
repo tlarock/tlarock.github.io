@@ -1,0 +1,32 @@
+title: Tim LaRock
+description: Network scientist working on higher-order methods for infrastructure and mobility data.
+author: Tim LaRock
+email: timothylarock@gmail.com
+url: "https://tlarock.github.io"
+baseurl: ""
+
+markdown: kramdown
+theme: null
+
+nav:
+  - title: Bio
+    url: /
+  - title: Research
+    url: /research/
+  - title: Projects
+    url: /projects/
+  - title: Teaching
+    url: /teaching/
+  - title: Writing
+    url: /writing/
+  - title: Contact
+    url: /contact/
+  - title: CV
+    url: /img/LaRock_Tim_CV.pdf
+
+exclude:
+  - _legacy_pandoc
+  - README.md
+  - teaching/cs3000/Makefile
+  - Gemfile
+  - Gemfile.lock
