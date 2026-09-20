@@ -22,7 +22,7 @@ nav:
   - title: Contact
     url: /contact/
   - title: CV
-    url: /img/LaRock_Tim_CV.pdf
+    url: /img/LaRock-cv.pdf
 
 exclude:
   - _legacy_pandoc
